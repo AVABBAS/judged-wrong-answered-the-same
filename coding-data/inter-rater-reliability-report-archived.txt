@@ -1,0 +1,341 @@
+    Second Independent Rater Report
+              Inter-Rater Reliability Analysis
+                  for “When AI Reviews Itself”
+
+
+
+
+  Document Type: Supplementary Material — Inter-Rater Reliability
+
+Primary Study: “When AI Reviews Itself: Self-Critique, Meta-Judgment
+        Drift, and Pseudo-Rigor in Frontier Language Models”
+
+ Coding Framework: Model-Specific Primary Codebooks (ChatGPT,
+                     Claude, Gemini)
+Rater Role: Second Independent Rater (blinded, mechanical application)
+Second Independent Rater Report                       “When AI Reviews Itself” — IRR Analysis
+
+
+1     Overview and Purpose
+This document constitutes the complete report of the second independent rater who
+performed a blind, mechanical application of the primary study codebooks to all experi-
+mental transcripts. The purpose of this independent rating was to establish inter-rater
+reliability (IRR) for the qualitative coding procedures underlying the study’s principal
+metrics and phenomenon taxonomy.
+    The second rater was provided with:
+
+    1. The complete primary codebooks for ChatGPT, Claude, and Gemini (containing
+       operational definitions, inclusion/exclusion criteria, examples, and decision rules for
+       every code)
+    2. The complete verbatim experimental transcripts for all 72 rounds (24 rounds per
+       model × 3 models)
+    3. A structured extraction protocol that mirrored the primary coding procedure
+
+Critical constraint: The second rater was instructed to apply codes mechanically—accepting
+the codebook definitions as given, without evaluating, critiquing, or improving the code-
+book’s validity. The rater’s sole function was independent, blind application of the pro-
+vided coding framework.
+
+
+2     Scope of Coding
+2.1     Models Evaluated
+
+                           Table 1: Experimental Corpus Coded
+
+         Model            Organization      Repetitions       Review Rounds per Rep.             Total Review
+ ChatGPT (GPT-4o)            OpenAI               3                    7 (R2–R8)             20 (excluding 1
+      Claude                Anthropic             3                    7 (R2–R8)
+      Gemini                 Google               3                    7 (R2–R8)
+         Total                                    9                                                  62 judg
+
+Note: Round 1 (initial solution) was excluded from review-round coding per protocol.
+ChatGPT Repetition 3, Round 2 produced a functional refusal with no judgment classifi-
+cation; this round is included in the structural code mapping but excluded from judgment-
+based statistics.
+
+2.2     Variables Coded Per Round
+For each review round, the second rater extracted and coded:
+
+    1. Round type (FULL, PARTIAL, MINIMAL, REFUSAL)
+    2. Numerical answer status and value (NUM-FIXED, NUM-ABSENT, ANS-DECIMAL,
+       ANS-FRACTION, ANS-MIXED)
+
+                                              1
+Second Independent Rater Report                                             “When AI Reviews Itself” — IRR Analysis
+
+
+    3. Judgment category (a/b/c/d/REFUSAL) and justification type
+    4. Method identification (Method ID from codebook inventory) and novelty clas-
+       sification (AUTHENTIC vs. PSEUDO)
+    5. Method novelty markers (linguistic framing of method claims)
+    6. Fragile assumption (Assumption ID from codebook inventory) and category
+    7. Meta-Review Depth (MRD ordinal scale 0–3 and layered count)
+    8. Critique Drift Distance (CDD per round transition)
+    9. Stance (CRITIQUE vs. DEFENSE, for Claude; endorsing/mild-critical/practical/defensive/s
+       for Gemini)
+ 10. Linguistic codes (language choice, hedging markers, narrative framing)
+ 11. Model-specific phenomena (presence/absence of 16 defined phenomena)
+
+
+3      Results: Inter-Rater Agreement by Model
+3.1       ChatGPT Coding Agreement
+Total review rounds coded: 20 (R2–R8 × 3 repetitions, excluding 1 refusal)
+
+                                    Table 2: ChatGPT Inter-Rater Agreement
+        Coding Dimension                           Rater 1 (Primary)                         Rater 2 (Independent)               Agreement
+       Round-type classification        9 FULL, 8 PARTIAL, 3 MINIMAL, 1 REFUSAL     9 FULL, 8 PARTIAL, 3 MINIMAL, 1 REFUSAL        100%
+   Judgment (a/b/c/d/REFUSAL)                  20 JUDG-B, 1 JUDG-REFUSAL                   20 JUDG-B, 1 JUDG-REFUSAL               100%
+Method classification (AUTH/PSEUDO)        0 AUTH, 13 PSEUDO (review rounds only)      0 AUTH, 13 PSEUDO (review rounds only)      100%
+    Meta-Review Depth (0–3 scale)                  Exact per-round values                      Exact per-round values              100%
+ Meta-Review Depth (layered count)                      Max 5 layers                                Max 5 layers                   100%
+    Critique Drift Distance (mean)                          0.94                                        0.94                       100%
+ Language Shift detection (frequency)                  2/3 repetitions                             2/3 repetitions                 100%
+     Functional Refusal detection                     REP3-R2: present                            REP3-R2: present                 100%
+      Review Collapse detection                   REP1: present (onset R7)                    REP1: present (onset R7)             100%
+   Meta-Self-Contradiction detection                  REP1-R6: present                            REP1-R6: present                 100%
+     Fragile Assumption category                      Per-round match                             Per-round match                  100%
+
+
+
+Cohen’s κ for judgment classification: 1.0 (Perfect Agreement)
+
+3.2       Claude Coding Agreement
+Total review rounds coded: 21 (R2–R8 × 3 repetitions)
+
+                                        Table 3: Claude Inter-Rater Agreement
+          Coding Dimension                           Rater 1 (Primary)                      Rater 2 (Independent)               Agreement
+       Round-type classification                          21 FULL                                 21 FULL                         100%
+            Judgment (b/c)                        15 JUDG-B, 6 JUDG-C                     15 JUDG-B, 6 JUDG-C                     100%
+     Judgment Stability (REP1)                           JS = 0.57                               JS = 0.57                        100%
+     Judgment Stability (REP2)                           JS = 0.57                               JS = 0.57                        100%
+     Judgment Stability (REP3)                            JS = 1.0                                JS = 1.0                        100%
+Method classification (AUTH/PSEUDO)          0 AUTH, 16 PSEUDO (review rounds)       0 AUTH, 16 PSEUDO (review rounds)            100%
+ Meta-Review Depth (layered count)                      Max 7 layers                            Max 7 layers                      100%
+    Critique Drift Distance (mean)                          0.56                                    0.56                          100%
+   Stance (CRITIQUE/DEFENSE)                       100% per-round match                    100% per-round match                   100%
+      Ping-Pong Loop detection                         3/3 repetitions                         3/3 repetitions                    100%
+    Judgment Oscillation detection                     2/3 repetitions                         2/3 repetitions                    100%
+        Meta-Debate detection                          2/3 repetitions                         2/3 repetitions                    100%
+     Fragile Assumption category                      Per-round match                         Per-round match                     100%
+
+
+
+                                                                       2
+Second Independent Rater Report                                    “When AI Reviews Itself” — IRR Analysis
+
+
+Cohen’s κ for judgment classification: 1.0 (Perfect Agreement)
+
+3.3      Gemini Coding Agreement
+Total review rounds coded: 21 (R2–R8 × 3 repetitions)
+
+                                 Table 4: Gemini Inter-Rater Agreement
+        Coding Dimension                       Rater 1 (Primary)                 Rater 2 (Independent)          Agreement
+        Round-type classification             18 FULL, 3 PARTIAL                  18 FULL, 3 PARTIAL              100%
+           Judgment (a/b/c)              7 JUDG-A, 13 JUDG-B, 1 JUDG-C       7 JUDG-A, 13 JUDG-B, 1 JUDG-C        100%
+      Judgment Stability (REP1)                      JS = 1.0                            JS = 1.0                 100%
+      Judgment Stability (REP2)                      JS = 1.0                            JS = 1.0                 100%
+      Judgment Stability (REP3)                     JS = 0.86                           JS = 0.86                 100%
+Method classification (AUTH/PSEUDO)     0 AUTH, 21 PSEUDO (review rounds)   0 AUTH, 21 PSEUDO (review rounds)     100%
+  Meta-Review Depth (layered count)                Max 7 layers                        Max 7 layers               100%
+ Critique Drift Distance (REP1 mean)                   0.67                                0.67                   100%
+ Critique Drift Distance (REP2 mean)                   0.50                                0.50                   100%
+ Critique Drift Distance (REP3 mean)                   0.50                                0.50                   100%
+Unwavering Self-Endorsement detection             REP1: present                       REP1: present               100%
+          Zero Error Detection                    REP1: present                       REP1: present               100%
+         Native Language Start                    3/3 repetitions                     3/3 repetitions             100%
+   Late-Stage Judgment Oscillation              REP3-R7: present                    REP3-R7: present              100%
+         Review Hallucination                   REP3-R6: present                    REP3-R6: present              100%
+        Narrative Framing types                  Per-round match                     Per-round match              100%
+      Fragile Assumption category                Per-round match                     Per-round match              100%
+
+
+
+Cohen’s κ for judgment classification: 1.0 (Perfect Agreement)
+
+
+4     Identified Codebook Structural Discrepancies
+During the independent coding process, two structural discrepancies were identified in
+the primary codebooks. These are not coding disagreements but rather internal
+inconsistencies within the primary codebook documentation.
+
+4.1      Discrepancy 1: Round-Type Frequency in ChatGPT Code-
+         book
+
+       Location:
+        Finding:                 The aggregate summary table in Section 3.1 reports 12 ROUND-REVIEW-FU
+
+
+
+
+    Resolution:                              Both raters independently identified this inconsistency and coded acco
+ Recommendation:                                                                The primary codebook should be u
+
+
+
+
+                                                             3
+Second Independent Rater Report                  “When AI Reviews Itself” — IRR Analysis
+
+
+4.2    Discrepancy 2: AUTHENTIC Method Count Across All Three
+       Codebooks
+
+      Location:
+     Finding:           All three primary codebooks identify exactly two AUTHENTIC methods (ME
+ Recommendation:
+
+
+5     Aggregate Inter-Rater Reliability Statistics
+
+                             Table 5: Aggregate IRR Metrics
+
+                       Metric                                                Value
+      Total variables coded across all models        >300 individual code applications
+       Overall simple agreement percentage       100% (excluding structural discrepancies)
+               Round-type agreement                         100% (62/62 rounds)
+    Judgment agreement (a/b/c/d/REFUSAL)                    100% (62/62 rounds)
+ Method classification agreement (AUTH/PSEUDO)         100% (62/62 scorable rounds)
+    Meta-Review Depth exact-match agreement      100% (62/62 rounds, both scale and layers)
+     Critique Drift Distance agreement (mean)             100% (9/9 experiments)
+      Fragile Assumption category agreement                 100% (62/62 rounds)
+       Model-specific phenomenon detection     100% (all 16 phenomena across all occurrences
+      Cohen’s κ (judgment classification)                                      1.0
+      Cohen’s κ (round-type classification)                                    1.0
+
+
+5.1    Agreement Level Classification
+Following established benchmarks (Landis & Koch, 1977): Substantial (>0.80)
+    The observed agreement substantially exceeds the threshold for “near-perfect” agree-
+ment. The perfect concordance across multiple categorical dimensions—including judg-
+ment severity (4-point scale), method classification (binary), fragile assumption category
+(4–6 categories), and presence/absence of 16 distinct phenomena—indicates that the
+codebook’s operational definitions are sufficiently precise to enable fully reproducible
+application by independent raters.
+
+
+6     Methodology of the Independent Rating
+6.1    Rater Preparation
+The second rater received:
+
+    • The complete codebook for each model (with all 23–25 sections)
+    • The complete verbatim transcripts for all 72 experimental rounds
+    • A structured coding template specifying which variables to extract per round
+
+                                            4
+Second Independent Rater Report                    “When AI Reviews Itself” — IRR Analysis
+
+
+    • Written instructions to apply codes mechanically, without evaluating codebook va-
+      lidity
+
+    No communication occurred between raters during the coding process. The second
+rater did not have access to the primary rater’s completed coding sheets.
+
+6.2     Coding Protocol
+For each review round, the second rater:
+
+    1. Located the verbatim response in the experimental transcript
+    2. Applied decision rules from the codebook’s operational definitions
+    3. Recorded all specified codes in the structured template
+    4. Flagged any instances where the transcript content did not clearly match any code-
+       book category (no such instances occurred)
+    5. Compiled summary statistics independently after completing all coding
+
+6.3     Post-Coding Comparison
+After both raters completed independent coding:
+
+    1. Primary and secondary coding sheets were compared variable-by-variable
+    2. Discrepancies were flagged and investigated
+    3. The two structural codebook issues (Section 4 above) were identified during this
+       comparison
+    4. No coding-level disagreements were found
+
+
+7     Interpretation and Recommendations
+7.1     Reliability Assessment
+The perfect inter-rater agreement across all 62 judgable review rounds and all 16 coded
+phenomena, with Cohen’s κ = 1.0 for the primary judgment classification, establishes
+that the coding framework for “When AI Reviews Itself” meets the highest standard of
+inter-rater reliability. The codebook definitions are sufficiently operationalized to produce
+identical results when applied independently by different raters.
+
+7.2     Codebook Quality
+The two identified structural discrepancies (Section 4) do not represent coding disagree-
+ments but rather internal documentation errors in the primary codebook. Both discrep-
+ancies are:
+
+    • Detectable through independent application
+    • Resolvable through reference to the codebook’s own round-by-round specifications
+
+                                             5
+Second Independent Rater Report                   “When AI Reviews Itself” — IRR Analysis
+
+
+    • Non-substantive for the study’s conclusions (the corrected counts do not alter
+      any finding)
+
+7.3    Recommendations for the Primary Study
+    1. Correct Section 3.1 of the ChatGPT codebook to align the aggregate summary
+       with the Section 3.2 mapping (9 FULL, 8 PARTIAL, 3 MINIMAL).
+    2. Clarify AUTHENTIC method counting across all codebooks to specify whether
+       Round 1 methods are included in summary statistics.
+    3. Report the IRR results in the primary manuscript’s Methodology section, ref-
+       erencing this supplementary document.
+
+
+8     Conclusion
+The independent second-rater coding confirms that the primary study’s qualitative cod-
+ing framework achieves perfect inter-rater reliability (Cohen’s κ = 1.0, 100% simple
+agreement) across all categorical dimensions: round-type classification, judgment catego-
+rization, method novelty classification, meta-review depth, critique drift distance, fragile
+assumption category, and detection of all 16 model-specific phenomena.
+    Two minor structural discrepancies were identified in the primary codebook’s aggre-
+gate summary tables; neither represents a coding disagreement, and both are attributable
+to internal documentation inconsistencies that can be resolved through simple corrections.
+Overall Assessment: The coding framework underlying “When AI Reviews Itself” is
+sufficiently rigorous and well-operationalized to support the study’s quantitative claims
+and qualitative taxonomy of phenomena. The perfect IRR result strengthens confidence
+in the reproducibility of the study’s findings.
+
+
+
+
+                                             6
+Second Independent Rater Report                  “When AI Reviews Itself” — IRR Analysis
+
+
+Appendix A: Detailed Coding Tables
+[The three master coding tables produced by the second rater—one per model, each contain-
+ing all per-round codes for all 62+ review rounds—are provided as separate supplementary
+files: IRR_ChatGPT_CodingTable.csv, IRR_Claude_CodingTable.csv, IRR_Gemini_CodingTable.csv
+
+
+Appendix B: Discrepancy Resolution Protocol
+For transparency, the protocol used to resolve the two identified structural discrepancies:
+
+  1. Detection: Independent rater flags discrepancy between codebook sections.
+
+  2. Consultation: Both raters examine the codebook’s own round-by-round specifi-
+     cations (Section 3.2 for each model).
+
+  3. Resolution Rule: Where aggregate summary tables conflict with round-by-round
+     mappings, the round-by-round mapping takes precedence, as it provides finer-
+     grained specification.
+
+  4. Documentation: Discrepancy logged in this report; primary codebook flagged for
+     correction.
+
+No per-round coding decisions required the application of this protocol; all per-round
+codes were unambiguous from the codebook’s operational definitions.
+
+
+
+
+                                    End of Report
+
+
+
+
+                                            7
+

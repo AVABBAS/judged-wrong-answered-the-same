@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the article."
+title: "Judged Wrong, Answered the Same: Data and Materials"
+authors:
+  - family-names: Hamidavi
+    given-names: Abbas
+    orcid: "https://orcid.org/0009-0001-7342-7844"
+    affiliation: "Department of Computer Engineering, Mashhad Branch, Islamic Azad University, Mashhad, Iran"
+date-released: 2026-11-04
+license: CC-BY-4.0
+preferred-citation:
+  type: article
+  title: "Judged Wrong, Answered the Same: Judgment–Revision Decoupling in Iterative LLM Self-Review"
+  authors:
+    - family-names: Hamidavi
+      given-names: Abbas
+      orcid: "https://orcid.org/0009-0001-7342-7844"
+  journal: "AI and Society"
+  year: 2026
+  notes: "Manuscript submitted November 2026. Preprint: Research Square rs-10463884."

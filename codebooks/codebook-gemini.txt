@@ -1,0 +1,1839 @@
+Contents
+
+1 Complete Codebook: Gemini 3.1 Pro — Extended Edition .       .   .   .   .   .   .   .   .   .   .   .   .    4
+2 Experiment Metadata . . . . . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   .   .   .    4
+  2.1 Experiment Identification . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .    4
+  2.2 Experiment Configuration . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .    4
+  2.3 Experiment Design Parameters . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .    5
+3 Session Configuration Codes . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .    5
+  3.1 Session Identity . . . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .    5
+  3.2 Session Initialization . . . . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .    5
+  3.3 Session Anomalies . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .    6
+4 Round-Level Structural Codes . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .    6
+  4.1 Round Type Classification . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .    6
+  4.2 Round-by-Round Type Mapping . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .    7
+  4.3 Round Duration/Effort Indicators . . . . . . . . . .     .   .   .   .   .   .   .   .   .   .   .   .    7
+5 Answer and Output Integrity Codes . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .    8
+  5.1 Numerical Answer Status (Per Round) . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .    8
+  5.2 Answer Presentation Variants . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .    8
+  5.3 Answer Formatting Consistency . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .    8
+6 Response Architecture Codes . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .    9
+  6.1 Structural Elements Present Per Round. . . . . . . .     .   .   .   .   .   .   .   .   .   .   .   .    9
+  6.2 Section Header Usage . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .    9
+  6.3 Narrative Framing Devices . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   10
+7 Methodological Codes . . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   11
+  7.1 Complete Method Inventory . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   11
+  7.2 Method Novelty Classification . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   12
+  7.3 Method Linguistic Novelty Markers . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   12
+8 Algebraic Signature Decomposition. . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   13
+  8.1 Core Algebraic Kernel . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   13
+  8.2 Method-to-Kernel Mapping . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   14
+  8.3 Variable Diversity Index (VDI) Calculation . . . . . .   .   .   .   .   .   .   .   .   .   .   .   .   14
+9 Fragile Assumption Codes . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   16
+  9.1 Complete Assumption Inventory . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   16
+  9.2 Assumption Category Frequency . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   17
+10 Assumption Drift Sequence Mapping . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   18
+  10.1 REP1 Drift Sequence . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   18
+  10.2 REP2 Drift Sequence . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   19
+  10.3 REP3 Drift Sequence . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   20
+  10.4 Critique Drift Distance (CDD) Per Round . . . . . .     .   .   .   .   .   .   .   .   .   .   .   .   20
+11 Judgment Codes . . . . . . . . . . . . . . . .              .   .   .   .   .   .   .   .   .   .   .   .   21
+  11.1 Complete Judgment Inventory . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   21
+  11.2 Judgment Distribution Summary . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   21
+  11.3 Judgment Justification Content Analysis . . . . . . .   .   .   .   .   .   .   .   .   .   .   .   .   22
+  11.4 Judgment-Answer Relationship . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   22
+12 Critique Drift Codes . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   23
+  12.1 Critique Focus Per Round (Detailed) . . . . . . . .     .   .   .   .   .   .   .   .   .   .   .   .   23
+  12.2 Critique Drift Distance (CDD) Summary . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   23
+13 Meta-Review Recursion Codes . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.1 MRD Per Round (Detailed) . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.2 Meta-Review Depth Layers (Layered Count) . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.3 Meta-Review Linguistic Markers . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+14 Endorsement Pattern Codes . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+  14.1 Unwavering Self-Endorsement — Detailed . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+  14.2 Endorsement Linguistic Patterns . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+15 Error Detection Pattern Codes . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  15.1 Zero Error Detection — Detailed . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  15.2 Error Detection Patterns Across Repetitions . .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  15.3 Types of Errors Detected (REP2, REP3) . . . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+16 Linguistic and Stylistic Codes . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+  16.1 Language Choice . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+  16.2 Rhetorical Stance . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   28
+  16.3 Hedging and Certainty Markers . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   28
+17 Model-Specific Phenomenon Codes . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+  17.1 Unwavering Self-Endorsement — Detailed . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+  17.2 Zero Error Detection — Detailed . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+  17.3 Native Language Start — Detailed . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+  17.4 Late-Stage Judgment Oscillation — Detailed . .    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  17.5 Review Hallucination — Detailed . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+18 Cross-Round Pattern Codes . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  18.1 Response Length Trajectory (Word Count) . . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  18.2 Structural Completeness Trajectory . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   31
+  18.3 Novelty Claim Freshness . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   31
+19 Interaction Pattern Codes . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+  19.1 Prompt Compliance Patterns . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+  19.2 Model-Prompt Tension Patterns . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+20 Temporal Evolution Codes. . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.1 Phase Classification . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.2 Temporal Signatures . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.3 Comparative Temporal Profile vs. Other Models .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+21 Thematic Summary Codes. . . . . . . . . .             .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+  21.1 Core Themes . . . . . . . . . . . . .             .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+  21.2 Gemini Signature Profile . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+22 Phenomenon Co-occurrence Matrix . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+  22.1 Within-Gemini Co-occurrence . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+  22.2 Cross-Model Phenomenon Sharing . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   36
+23 Statistical Summary . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   37
+  23.1 Descriptive Statistics . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   37
+  23.2 Judgment Distribution (Gemini Only). . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   37
+  23.3 Inferential Statistics . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   38
+24 Verbatim Quote Index . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   40
+  24.1 Complete Quote Inventory. . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   40
+25 Cross-Reference to Universal Codebook . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+  25.1 Mapping to Universal Phenomenon Codes . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+  25.2 Comparative Metrics Across Models . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+
+                                               2
+26 Researcher Notes and Annotations      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+  26.1 Key Observations . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+  26.2 Coding Decisions and Notes . .    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+  26.3 Limitations of This Codebook .    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   43
+27 Appendix: Quick Reference Card .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   43
+  27.1 Gemini Signature Summary . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   43
+  27.2 Top 5 Most Informative Quotes .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   43
+
+
+
+
+                                                     3
+1     Complete Codebook: Gemini 3.1 Pro — Extended Edition
+
+Summary
+Gemini 3.1 Pro Complete Codebook — Extended Edition
+Model: Google Gemini 3.1 Pro (as available at time of experiment)
+Experiment: GEMINI-001 through GEMINI-003
+Total Rounds: 24 (3 repetitions × 8 rounds)
+Temperature: 0 (deterministic)
+
+
+2     Experiment Metadata
+
+2.1    Experiment Identification
+
+      Codebook Entry
+
+
+        Code                     Definition                         Value
+        EXP-ID                   Experiment identifier              GEMINI-001 through GEMINI-003
+        EXP-DATE                 Date of experiment                 [Insert dates]
+        EXP-PLATFORM             Access platform                    Gemini web interface / API (Google)
+        EXP-VERSION              Model version                      Gemini 3.1 Pro (as available at time
+                                                                    of experiment)
+        EXP-ORG                  Organization                       Google
+
+
+
+2.2    Experiment Configuration
+
+      Codebook Entry
+
+
+        Code                     Definition                         Value
+        CONFIG-TEMP              Temperature setting                0 (deterministic)
+        CONFIG-TOP-P             Top-p sampling                     1.0 (default)
+        CONFIG-CONTEXT           Context window                     Fresh session per repetition
+        CONFIG-MEMORY            Memory carryover                   None (independent sessions)
+        CONFIG-SYSTEM-           System prompt                      Default Google system prompt
+        PROMPT
+        CONFIG-TRAINING          Training paradigm                  RLHF with safety and helpfulness
+                                                                    emphasis
+        CONFIG-TOOLS             Tools/plugins enabled              None
+        CONFIG-                  Multimodal capabilities            Not used
+        MULTIMODAL
+
+
+
+
+                                                       4
+2.3    Experiment Design Parameters
+
+      Codebook Entry
+
+
+        Code                      Definition                          Value
+        DESIGN-MODELS             Number of models in study           3 (ChatGPT, Claude, Gemini)
+        DESIGN-REPS               Repetitions per model               3
+        DESIGN-ROUNDS             Total rounds per repetition         8 (1 initial + 7 reviews)
+        DESIGN-TOTAL-             Total rounds for this model         24
+        ROUNDS
+        DESIGN-STIMULUS           Problem type                        Ambiguous discount arithmetic
+        DESIGN-PROTOCOL           Review protocol                     5-question structured self-review
+
+
+
+3     Session Configuration Codes
+
+3.1    Session Identity
+
+      Codebook Entry
+
+
+       Code                     Definition                     REP1           REP2              REP3
+       SESSION-ID               Unique session identifier      GEMINI-S1      GEMINI-S2         GEMINI-S3
+       SESSION-NEW              Fresh session (no history)     ✓              ✓                 ✓
+       SESSION-                 No cross-session contam-       ✓              ✓                 ✓
+       INDEPENDENT              ination
+
+
+
+3.2    Session Initialization
+
+      Codebook Entry
+
+
+        Code                          Definition                      Value
+        INIT-TIMESTAMP                Session start time              [Insert]
+        INIT-PROMPT-TYPE              First prompt type               Initial Solution Prompt (6-step struc-
+                                                                      tured)
+        INIT-RESPONSE-TIME            Time to first response          [Insert if available]
+
+
+
+
+                                                       5
+3.3    Session Anomalies
+
+      Codebook Entry
+
+
+       Code                    Definition                       REP1                 REP2                REP3
+      ANOMALY-NATIVE-          Response in non-English          ✓                    ✓                   ✓
+      LANG                     from Round 1
+      ANOMALY-                 Unwavering (a) judgments         ✓                    —                   —
+      ENDORSEMENT
+      ANOMALY-ZERO-            Zero errors detected in all      ✓                    —                   —
+      ERROR                    rounds
+      ANOMALY-LATE-            Judgment shift at late stage     —                    —                   ✓
+      OSCILLATION
+      ANOMALY-                 Review hallucination ob-         —                    —                   ✓
+      HALLUCINATION            served
+      ANOMALY-                 Truncated output                 —                    —                   —
+      TRUNCATION
+      ANOMALY-REFUSAL          Unexpected refusal               —                    —                   —
+      ANOMALY-LANG-            Mid-experiment language          —                    —                   —
+      SHIFT                    change
+
+
+
+4     Round-Level Structural Codes
+
+4.1    Round Type Classification
+
+      Codebook Entry
+
+
+       Code                 Definition                        Identifying Features           Frequency
+       ROUND-INITIAL        Initial solution round            6-step structured output (A-   3/24
+                                                              F), dual-method solving, of-
+                                                              ten in non-English
+       ROUND-REVIEW-        Complete review with all 5        Q1-Q5 all present, detailed    18/24
+       FULL                 questions                         analysis
+       ROUND-REVIEW-        Review with some questions        Some questions answered        3/24
+       PARTIAL              shortened                         with less detail
+       ROUND-REVIEW-        Review with minimal content       Brief responses, skipped       0/24
+       MINIMAL                                                questions
+       ROUND-REVIEW-        Refusal to perform review         No questions answered          0/24
+       REFUSAL
+
+
+Summary
+Key Distinction: Gemini showed generally high structural compliance but with some variation, particularly in
+REP2 and REP3 where Q3-Q4 responses became more perfunctory in later rounds. Unlike ChatGPT (collapse)
+and Claude (perfect compliance), Gemini occupies a middle ground.
+
+
+
+
+                                                     6
+4.2    Round-by-Round Type Mapping
+
+      Codebook Entry
+
+
+         Round         REP1 Type                REP2 Type                 REP3 Type
+         R1            ROUND-INITIAL (non-      ROUND-INITIAL (non-       ROUND-INITIAL (non-
+                       English)                 English)                  English)
+         R2            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     FULL                      FULL
+         R3            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     FULL                      FULL
+         R4            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     FULL                      FULL
+         R5            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     FULL                      FULL
+         R6            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     PARTIAL                   FULL
+         R7            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     PARTIAL                   FULL
+         R8            ROUND-REVIEW-            ROUND-REVIEW-             ROUND-REVIEW-
+                       FULL                     PARTIAL                   FULL
+
+
+
+4.3    Round Duration/Effort Indicators
+
+      Codebook Entry
+
+
+        Code                Definition                     Measurement
+        EFFORT-WORD-        Total words in response        R1: ∼400-500, R2-R8: ∼250-400 (gener-
+        COUNT                                              ally sustained, minor decline)
+        EFFORT-             Presence of section headers,   R1-R8: generally maintained with minor
+        STRUCTURE           numbered lists                 simplification in REP2
+        EFFORT-             Number of mathematical ex-     R1: ∼12-18, R2-R8: ∼8-15 (sustained)
+        EQUATIONS           pressions
+
+
+
+
+                                                      7
+5     Answer and Output Integrity Codes
+
+5.1    Numerical Answer Status (Per Round)
+
+      Codebook Entry
+
+
+       Round     REP1 Status      REP1 Value         REP2 Status      REP2 Value     REP3 Status      REP3 Value
+       R1        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R2        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R3        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R4        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R5        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R6        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R7        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R8        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+
+
+
+5.2    Answer Presentation Variants
+
+      Codebook Entry
+
+
+       Code              Definition                        Example                     Frequency
+       ANS-              Answer as exact fraction          "400/3"                     15/24
+       FRACTION
+       ANS-DECIMAL       Answer as decimal                 "$133.33"                   6/24
+       ANS-MIXED         Both fraction and decimal         "$133.33 (400/3)"           3/24
+       ANS-ABSENT        No answer                         —                           0/24
+
+
+Summary
+Key Distinction: Gemini showed a preference for exact fractional representation (400/3) similar to Claude, but
+with more decimal variants than Claude. This contrasts with ChatGPT’s strong decimal preference.
+
+
+5.3    Answer Formatting Consistency
+
+      Codebook Entry
+
+
+       Code                    Definition                       REP1               REP2                REP3
+       FORMAT-                 Same format used throughout      ✓(fraction domi-   —                   —
+       CONSISTENT                                               nant)
+       FORMAT-VARIED           Format     changed     across    —                  ✓(mixed)            ✓(mixed)
+                               rounds
+
+
+
+
+                                                       8
+6     Response Architecture Codes
+
+6.1    Structural Elements Present Per Round
+
+      Codebook Entry
+
+
+       Round      REP1 Elements                   REP2 Elements                  REP3 Elements
+       R1         TITLE          (non-English), TITLE          (non-English), TITLE          (non-English),
+                  STEPS A-F, EQUATIONS, STEPS A-F, EQUATIONS, STEPS A-F, EQUATIONS,
+                  VERIFICATION, FINAL VERIFICATION, FINAL VERIFICATION, FINAL
+                  ANSWER                        ANSWER                        ANSWER
+       R2         Q1-Q5 all with headers, equa- Q1-Q5 all with headers, equa- Q1-Q5 all with headers, equa-
+                  tions, (a) judgment           tions, (b) judgment           tions, (b) judgment
+       R3         Q1-Q5, sustained detail       Q1-Q5, sustained detail       Q1-Q5, sustained detail
+       R4         Q1-Q5, sustained detail       Q1-Q5, sustained detail       Q1-Q5, sustained detail
+       R5         Q1-Q5, sustained detail       Q1-Q5 with minor simplifi- Q1-Q5, sustained detail
+                                                cation
+       R6         Q1-Q5, sustained detail       Q1-Q5 with moderate simpli- Q1-Q5, Review Hallucina-
+                                                fication                      tion
+       R7         Q1-Q5, sustained detail       Q1-Q5 with moderate simpli- Q1-Q5, Late-Stage Oscilla-
+                                                fication                      tion (c)
+       R8         Q1-Q5, sustained detail       Q1-Q5 with moderate simpli- Q1-Q5, return to (b)
+                                                fication
+
+
+Summary
+Key Distinction: Gemini maintained relatively high structural compliance, with REP2 showing gradual
+simplification. No collapse comparable to ChatGPT. The late-stage oscillation in REP3 (R7) and review
+hallucination in REP3 (R6) are unique to Gemini.
+
+
+6.2    Section Header Usage
+
+      Codebook Entry
+
+
+       Code                  Definition                        Example                 Frequency
+       HEADER-               Numbered question headers         "QUESTION 1 —           21/21
+       QUESTION                                                ASSUMPTION AU-
+                                                               DIT:"
+       HEADER-ANSWER         "YOUR ANSWER:" markers            "YOUR ANSWER:"          18/21
+       HEADER-               Method name as header             "Method:       Delta-   21/21
+       METHOD                                                  Ratio Analysis"
+       HEADER-STEP           Step labels in initial solution   "Step One: Clari-       3/3
+                                                               fying the Ambiguity
+                                                               (STEP A)"
+       HEADER-ABSENT         No headers used                   —                       0/21
+
+
+
+
+                                                        9
+6.3    Narrative Framing Devices
+
+      Codebook Entry
+
+
+       Code               Definition                      Example                    First Observed
+       FRAME-ENDORSE      Strong endorsement framing      "The         proposed      REP1-R2
+                                                          solution is:         (a)
+                                                          COMPLETELY
+                                                          CORRECT — every
+                                                          step is flawless"
+       FRAME-MILD-        Mild, balanced critique         "The solution is           REP2-R2, REP3-R2
+       CRITIQUE                                           MOSTLY           COR-
+                                                          RECT          because
+                                                          the      mathematical
+                                                          reasoning is sound,
+                                                          but..."
+       FRAME-REAL-        Real-world      applicability   "In a real-world re-       REP2-R2
+       WORLD              framing                         tail context, a ’sale’
+                                                          or ’discounted total’
+                                                          could include a flat
+                                                          transaction fee"
+       FRAME-             Practical constraints framing   "Retail prices can ex-     REP1-R3
+       PRACTICAL                                          ist as exact, contin-
+                                                          uous fractional val-
+                                                          ues without being
+                                                          rounded"
+       FRAME-META         Meta-analysis framing           "The most question-        REP3-R4
+                                                          able assumption in the
+                                                          provided text is found
+                                                          in its Question 3"
+       FRAME-             Fabricated content              Criticizing        non-    REP3-R6
+       HALLUCINATION                                      existent         tiered
+                                                          discount example
+
+
+
+
+                                                    10
+7     Methodological Codes
+
+7.1    Complete Method Inventory
+
+      Codebook Entry
+
+
+       Method ID       Method Name (Verbatim)                  Round(s) Observed   Repetition(s)
+       METH-G01        "Algebraic substitution"                R1                  REP1, REP2, REP3
+       METH-G02        "Ratio analysis / Working back-         R1                  REP1, REP2, REP3
+                       wards"
+       METH-G03        "Numerical Logic / Trial and Error      R2                  REP1
+                       approach"
+       METH-G04        "Substitution and elimination           R2                  REP2
+                       method"
+       METH-G05        "System of Linear Equations via Sub-    R2                  REP3
+                       stitution"
+       METH-G06        "Delta-Ratio Analysis"                  R3                  REP1
+       METH-G07        "Difference-based approach"             R3                  REP2
+       METH-G08        "Proportional final-to-original ratio   R3                  REP3
+                       method"
+       METH-G09        "Simultaneous Scaling Method"           R4                  REP1
+       METH-G10        "Proportional Delta Analysis (Ratio     R4                  REP2
+                       of Differences)"
+       METH-G11        "Difference and discount amounts        R4                  REP3
+                       approach"
+       METH-G12        "System of Linear Equations using       R5                  REP1
+                       Discount Fraction"
+       METH-G13        "Direct substitution and elimination"   R5                  REP2
+       METH-G14        "Total Multiplier method"               R5                  REP3
+       METH-G15        "Slope-Intercept Linear Mapping"        R6                  REP1
+       METH-G16        "Discount Multiplier Equation           R6                  REP2
+                       method"
+       METH-G17        "Discount proportion approach"          R6                  REP3
+       METH-G18        "Cross-Multiplication of Ratios"        R7                  REP1
+       METH-G19        "System of Linear Equations (Sub-       R7                  REP2
+                       stitution Method)"
+       METH-G20        "Payment fraction method"               R7                  REP3
+       METH-G21        "Proportional Delta Analysis"           R8                  REP1
+       METH-G22        "Cross-Multiplication of Ratios         R8                  REP2
+                       method"
+       METH-G23        "Inverse price multiplier method"       R8                  REP3
+
+
+
+
+                                                     11
+7.2    Method Novelty Classification
+
+      Codebook Entry
+
+
+          Method ID       Classification          Rationale
+          METH-G01        AUTHENTIC (base-        Original algebraic derivation
+                          line)
+          METH-G02        AUTHENTIC (base-        Conceptually different approach (ratio)
+                          line)
+          METH-G03        PSEUDO                  Trial-and-error label, algebraic execution
+          METH-G04        PSEUDO                  Same substitution, relabeled
+          METH-G05        PSEUDO                  Same linear system
+          METH-G06        PSEUDO                  "Delta-Ratio" label, same difference logic
+          METH-G07        PSEUDO                  Same difference-based calculation
+          METH-G08        PSEUDO                  Same ratio equation
+          METH-G09        PSEUDO                  "Simultaneous Scaling" label, same algebra
+          METH-G10        PSEUDO                  Same proportional reasoning
+          METH-G11        PSEUDO                  Same discount amount approach
+          METH-G12        PSEUDO                  Same linear system
+          METH-G13        PSEUDO                  Same substitution
+          METH-G14        PSEUDO                  Same total multiplier
+          METH-G15        PSEUDO                  "Slope-Intercept" label, same algebra
+          METH-G16        PSEUDO                  Same discount multiplier
+          METH-G17        PSEUDO                  Same proportion approach
+          METH-G18        PSEUDO                  Same cross-multiplication
+          METH-G19        PSEUDO                  Same linear system
+          METH-G20        PSEUDO                  Same retention factor (0.3)
+          METH-G21        PSEUDO                  Same proportional analysis
+          METH-G22        PSEUDO                  Same cross-multiplication
+          METH-G23        PSEUDO                  Same inverse multiplier (k=10/3)
+
+
+
+7.3    Method Linguistic Novelty Markers
+
+      Codebook Entry
+
+
+        Code                Definition                            Example
+        NOVELTY-            Explicit claim of novelty             "a method you have NOT used in
+        EXPLICIT                                                  any previous round"
+        NOVELTY-            Novelty claimed through structural    "I will use a different approach"
+        STRUCTURAL          framing
+        NOVELTY-            Contrast with prior methods           "Without looking at the solution
+        CONTRAST                                                  above"
+        NOVELTY-            Technical-sounding label without      "Slope-Intercept Linear Mapping"
+        TECHNICAL           technical execution                   (uses algebra, not geometry)
+
+
+
+
+                                                   12
+8     Algebraic Signature Decomposition
+
+8.1     Core Algebraic Kernel
+
+      Analysis
+      Every claimed method in Gemini reduces to the following invariant computational kernel:
+      GIVEN:
+        Bat_final = 70
+        Total_final = 110 -> Ball_final = 40
+        Bat_orig = Ball_orig + 100
+
+      UNDER SAME PERCENTAGE DISCOUNT:
+        (x + 100)(1 - r) = 70
+        x(1 - r) = 40
+
+      GEMINI’S PREFERRED SOLUTION PATHS:
+        Method A (Division): (x+100)/x = 70/40 = 7/4 -> x = 400/3
+        Method B (Difference): (x+100)(1-r) - x(1-r) = 70-40 -> 100(1-r)=30 -> x=400/3
+        Method C (Cross-multiplication): 40/(x) = 70/(x+100) -> x = 400/3
+
+      ALL METHODS YIELD: x = 400/3 ~ 133.33
+
+
+
+
+                                                  13
+8.2    Method-to-Kernel Mapping
+
+      Codebook Entry
+
+
+         Method ID          Kernel Used            Variable Names               Distinctive Label
+         METH-G01           Method A               P_ball, r                    Standard algebraic
+         METH-G02           Method A               P_ball                       Ratio analysis
+         METH-G03           Method B               r values tested              "Trial and Error" (tests r=0.5,
+                                                                                0.4, 0.2, 0.3)
+         METH-G04           Method A               B, s                         Substitution and elimination
+         METH-G05           Method A               P_ball, P_bat, s             System of Linear Equations
+         METH-G06           Method B               k, original diff             "Delta-Ratio"
+         METH-G07           Method B               B, d                         Difference-based
+         METH-G08           Method A               P_ball                       Proportional ratio
+         METH-G09           Method B               r                            "Simultaneous Scaling"
+         METH-G10           Method B               k                            "Proportional Delta"
+         METH-G11           Method B               D_f                          Discount amounts
+         METH-G12           Method B               D_f                          Linear equations with dis-
+                                                                                count fraction
+         METH-G13           Method A               B, d                         Direct substitution
+         METH-G14           Method A               M (multiplier)               "Total Multiplier"
+         METH-G15           Method B               m (slope)                    "Slope-Intercept"
+         METH-G16           Method B               m                            "Discount Multiplier"
+         METH-G17           Method B               k                            Discount proportion
+         METH-G18           Method A               P_ball                       "Cross-Multiplication of Ra-
+                                                                                tios"
+         METH-G19           Method A               P_ball, P_bat                System of Linear Equations
+         METH-G20           Method B               f (fraction)                 "Payment fraction"
+         METH-G21           Method B               k                            "Proportional Delta"
+         METH-G22           Method A               P_ball                       "Cross-Multiplication"
+         METH-G23           Method B               k (inverse)                  "Inverse price multiplier"
+
+
+
+8.3    Variable Diversity Index (VDI) Calculation
+
+      Codebook Entry
+
+
+       Repetition            Unique Signatures                  Total Methods            VDI
+       REP1                  1 (all same kernel)                8                        1/8 ≈ 0.125
+       REP2                  1 (all same kernel)                8                        1/8 ≈ 0.125
+       REP3                  1 (all same kernel)                8                        1/8 ≈ 0.125
+       Overall               1                                  24                       ≈ 0.042
+
+
+Summary
+VDI ≈ 0.042: Out of 23 claimed distinct methods, only 1 genuinely distinct algebraic structure exists.
+
+
+
+
+                                                        14
+15
+9     Fragile Assumption Codes
+
+9.1    Complete Assumption Inventory
+
+      Codebook Entry
+
+
+         Assumption ID   Assumption Description (Verbatim or               Round   Rep
+                         Near-Verbatim)
+         FRAG-G01        "The binary conclusion that if the cashier’s      R2      REP1
+                         claim fails, the manager’s must be perfectly
+                         true"
+         FRAG-G02        "The instant deduction that the ball’s final      R2      REP2
+                         price must be exactly $40"
+         FRAG-G03        "The single most questionable assumption          R2      REP3
+                         is that the ’percentage discount’ model is
+                         the only valid mathematical framework"
+         FRAG-G04        "The use of rounded decimal approxima-            R3      REP1
+                         tions as exact values during the algebraic
+                         step"
+         FRAG-G05        "The assumption that ’discounted total price’     R3      REP2
+                         refers only to sum of individually discounted
+                         items without external factors"
+         FRAG-G06        "The assumption that the ’percentage dis-         R3      REP3
+                         count’ applies to the gross retail price rather
+                         than profit margin or markup"
+         FRAG-G07        "The declaration that ’Only ONE interpre-         R4      REP1
+                         tation leads to a mathematically consistent
+                         answer’"
+         FRAG-G08        "The assumption that retail prices can exist      R4      REP2
+                         as exact continuous fractional values"
+         FRAG-G09        "The assumption that the ’same percentage’        R4      REP3
+                         claim refers to gross retail price rather than
+                         wholesale cost"
+         FRAG-G10        "The assumption that a ’Uniform                   R5      REP1
+                         Step/Tiered Discount’ will naturally yield
+                         multiple valid pairs"
+         FRAG-G11        "The composite linear discount function           R5      REP2
+                         assumption (Discount = r×Original + C)"
+         FRAG-G12        "The Tiered/Step Discount interpretation as       R5      REP3
+                         a valid ’uniform’ discount"
+         FRAG-G13        "The claim that the equation B+30/(B+100)         R6      REP1
+                         = B-40/B represents discount rates being
+                         equal"
+         FRAG-G14        "The dismissal of ’same dollar amount’            R6      REP2
+                         claim without rigorous algebraic proof"
+         FRAG-G15        "The meta-reviewer’s assumption that a            R6      REP3
+                         Uniform Flat Cart Discount qualifies as a
+                         THIRD way"
+         FRAG-G16        "The assertion that a ’Uniform Non-Linear         R7      REP1
+                         Scaling Discount’ is a valid interpretation
+                         of a retail word problem"
+         FRAG-G17        "The claim that calling the equation an ’alge-    R7      REP2
+                         braic error’ is ’manufacturing a problem’"
+         FRAG-G18        "The assumption that the meta-reviewer’s          R7      REP3
+                                                      16
+                         critique of the tiered discount example is
+                         valid"
+         FRAG-G19        "The assumption that the ’percentage dis-         R8      REP1
+9.2    Assumption Category Frequency
+
+      Codebook Entry
+
+
+       Category                          Count              Percentage          Description
+       FRAG-INTERP (Interpretation)      6                  29%                 Core interpretive as-
+                                                                                sumptions about dis-
+                                                                                count meaning
+       FRAG-REVIEW (Meta-review)         5                  24%                 Assumptions about
+                                                                                prior critiques’ valid-
+                                                                                ity
+       FRAG-CURRENCY            (Real-   5                  24%                 Assumptions about
+       world/Practical)                                                         real-world applicabil-
+                                                                                ity
+       FRAG-ROUND           (Round-      2                  10%                 Assumptions about
+       ing/Precision)                                                           numerical precision
+       FRAG-TERM (Terminology)           2                  10%                 Assumptions about
+                                                                                precise meaning of
+                                                                                terms
+       FRAG-EPISTEMIC (Epistemologi-     1                  5%                  Assumptions about
+       cal)                                                                     nature of knowledge
+
+
+Summary
+Key Distinction: Gemini’s assumption categories are more evenly distributed than Claude’s (dominated by
+EPISTEMIC) and ChatGPT’s (more meta-heavy). Gemini shows particular concern with real-world applicability
+(24% vs. ChatGPT 7%, Claude 10%), reflecting its "Compliant Employee" persona—practical, grounded,
+concerned with real-world constraints.
+
+
+
+
+                                                   17
+10     Assumption Drift Sequence Mapping
+
+10.1    REP1 Drift Sequence
+
+     Analysis
+     R2: FRAG-INTERP (core interpretive assumption)
+            |
+            v
+     R3: FRAG-ROUND (rounding/precision concern)
+            |
+            v
+     R4: FRAG-INTERP (return to interpretation: "Only ONE interpretation")
+            |
+            v
+     R5: FRAG-INTERP (tiered discount as valid)
+            |
+            v
+     R6: FRAG-REVIEW (meta: equation representation)
+            |
+            v
+     R7: FRAG-INTERP (non-linear discount as valid interpretation)
+            |
+            v
+     R8: FRAG-INTERP (return to core: percentage model as only valid)
+     Drift Direction: Core → Precision → Core → Interpretation → Meta → Interpretation → Core
+     Signature: Oscillation between core and periphery, returning to interpretation multiple times. No
+     sustained meta-drift.
+
+
+
+
+                                                   18
+10.2   REP2 Drift Sequence
+
+  Analysis
+   R2: FRAG-INTERP (ball price deduction)
+         |
+         v
+   R3: FRAG-CURRENCY (real-world external factors)
+         |
+         v
+   R4: FRAG-CURRENCY (continuous fractional values)
+         |
+         v
+   R5: FRAG-INTERP (composite linear discount)
+         |
+         v
+   R6: FRAG-REVIEW (dismissal of cashier claim)
+         |
+         v
+   R7: FRAG-REVIEW (meta: manufacturing problems)
+         |
+         v
+   R8: FRAG-REVIEW (only mathematically consistent path)
+   Drift Direction: Core → Real-world → Real-world → Interpretation → Meta → Meta → Meta
+   Signature: Gradual shift from practical concerns to meta-review. More linear than REP1.
+
+
+
+
+                                             19
+10.3   REP3 Drift Sequence
+
+  Analysis
+   R2: FRAG-INTERP (only valid framework)
+         |
+         v
+   R3: FRAG-CURRENCY (profit margin vs. retail price)
+         |
+         v
+   R4: FRAG-CURRENCY (wholesale cost)
+         |
+         v
+   R5: FRAG-INTERP (tiered discount as uniform)
+         |
+         v
+   R6: FRAG-REVIEW (meta: Uniform Flat Cart Discount)
+         |
+         v
+   R7: FRAG-REVIEW (meta: meta-reviewer’s critique validity)
+         |
+         v
+   R8: FRAG-REVIEW (composite linear function yields infinite solutions)
+   Drift Direction: Core → Real-world → Real-world → Interpretation → Meta → Meta → Meta
+   Signature: Similar to REP2: practical → meta drift. Most consistent drift pattern across REP2
+   and REP3.
+
+
+10.4   Critique Drift Distance (CDD) Per Round
+
+   Codebook Entry
+
+
+        Round Transition     REP1 CDD               REP2 CDD            REP3 CDD
+        R2→R3                1 (ROUND vs IN- 1 (CURRENCY vs 1 (CURRENCY vs
+                             TERP)            INTERP)           INTERP)
+        R3→R4                1    (INTERP  vs 0 (CURRENCY vs 0 (CURRENCY vs
+                             ROUND)           CURRENCY)         CURRENCY)
+        R4→R5                0 (INTERP vs IN- 1 (INTERP vs CUR- 1 (INTERP vs CUR-
+                             TERP)            RENCY)            RENCY)
+        R5→R6                1 (REVIEW vs IN- 1 (REVIEW vs IN- 1 (REVIEW vs IN-
+                             TERP)            TERP)             TERP)
+        R6→R7                1 (INTERP vs RE- 0 (REVIEW vs RE- 0 (REVIEW vs RE-
+                             VIEW)            VIEW)             VIEW)
+        R7→R8                0 (INTERP vs IN- 0 (REVIEW vs RE- 0 (REVIEW vs RE-
+                             TERP)            VIEW)             VIEW)
+        CDD (mean)           0.67             0.50              0.50
+
+
+
+
+                                               20
+11     Judgment Codes
+
+11.1     Complete Judgment Inventory
+
+     Codebook Entry
+
+
+       Round        REP1           REP1 Verbatim             REP2         REP2 Verbatim          REP3        REP3 Verba
+       R2           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+       R3           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+       R4           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+       R5           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+       R6           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+       R7           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-C      "(c)  PAR
+                                   CORRECT"                               RECT"                              WRONG"
+       R8           JUDG-A         "(a) COMPLETELY           JUDG-B       "(b) MOSTLY COR-       JUDG-B      "(b) MOSTL
+                                   CORRECT"                               RECT"                              RECT"
+
+
+
+11.2     Judgment Distribution Summary
+
+     Codebook Entry
+
+
+       Repetition            Pattern                         JS (Judgment    Notes
+                                                             Stability)
+       REP1                  All (a) — Unwavering Self-      7/7 = 1.0       Contributed all 7 (a) judg-
+                             Endorsement                                     ments in entire study
+       REP2                  All (b) — Stable Mild Cri-      7/7 = 1.0       Consistent mild criticism
+                             tique
+       REP3                  (b) × 6, (c) × 1 — Late-Stage   6/7 ≈ 0.86      Single (c) at R7, returned to
+                             Oscillation                                     (b) at R8
+
+
+
+
+                                                      21
+11.3   Judgment Justification Content Analysis
+
+   Codebook Entry
+
+
+       Code              Definition                     Example                   Frequency
+       JUST-FLAWLESS     Claim of complete flawless-    "every single step is     7/21 (all REP1)
+                         ness                           perfect, examined one
+                                                        by one"
+       JUST-MINOR        Acknowledgment of minor is-    "The       underlying     13/21
+                         sues                           logic, equations, and
+                                                        multiple approaches
+                                                        are completely valid,
+                                                        but..."
+       JUST-ERROR        Identification of meaningful   "The solution con-        1/21 (REP3 R7)
+                         error                          tains a significant er-
+                                                        ror in Question 4"
+       JUST-PRACTICAL    Practical/real-world   con-    "The solution entirely    8/21
+                         cerns                          ignores practical cur-
+                                                        rency discreteness"
+
+
+
+11.4   Judgment-Answer Relationship
+
+   Codebook Entry
+
+
+        Code                            Definition               Value
+        JUDG-ANSWER-DECOUPLING          Judgment category in-    100% (all judgments with unchanged
+                                        dependent of answer      $133.33)
+       JUDG-ENDORSEMENT-                (a) judgment with un-    ✓(REP1: all (a) with $133.33)
+       ANSWER                           changed answer
+       JUDG-OSCILLATION-ANSWER          Late-stage oscillation   ✓(REP3: b→c→b with identical
+                                        with unchanged an-       $133.33)
+                                        swer
+
+
+
+
+                                                 22
+12     Critique Drift Codes
+
+12.1    Critique Focus Per Round (Detailed)
+
+     Codebook Entry
+
+
+       Round        REP1 Focus                      REP2 Focus                     REP3 Focus
+       R2           Core interpretation (binary     Core assumption (ball price)   Core interpretation (only
+                    conclusion)                                                    valid framework)
+       R3           Rounding/precision              Real-world external factors    Profit margin vs. retail
+       R4           "Only ONE interpretation"       Continuous fractional values   Wholesale cost vs. retail
+                    claim
+       R5           Tiered discount as valid        Composite linear discount      Tiered discount as uniform
+       R6           Meta: equation representa-      Meta: dismissal of cashier     Meta: Uniform Flat Cart Dis-
+                    tion                            claim                          count
+       R7           Non-linear discount interpre-   Meta: manufacturing prob-      Meta: meta-reviewer’s cri-
+                    tation                          lems                           tique
+       R8           Core: percentage as only        Meta: only consistent path     Meta: composite linear func-
+                    valid                                                          tion
+
+
+
+12.2    Critique Drift Distance (CDD) Summary
+
+     Codebook Entry
+
+
+            Repetition             CDD (mean)           Drift Pattern
+            REP1                   0.67                 Oscillating: core ↔ precision ↔ interpretation ↔
+                                                        meta
+            REP2                   0.50                 Linear-ish: real-world → interpretation → meta
+            REP3                   0.50                 Linear: real-world → interpretation → meta
+
+
+
+
+                                                        23
+13     Meta-Review Recursion Codes
+
+13.1    MRD Per Round (Detailed)
+
+     Codebook Entry
+
+
+       Round       REP1         REP1 Evidence                REP2      REP2 Evidence           REP3      REP3 Evidence
+                   MRD                                       MRD                               MRD
+       R1          0            Initial solve                0         Initial solve           0         Initial solve
+       R2          0            Reviews R1 solution          0         Reviews R1 solution     0         Reviews R1 solution
+                                directly                               directly                          directly
+       R3          1            References R2’s as-          1         References R2’s real-   1         References      R2’s
+                                sumption audit                         world concern                     framework concern
+       R4          1            References R3’s pre-         1         References R3’s cur-    1         References R3’s cost
+                                cision critique                        rency concern                     concern
+       R5          2            "The author as-              2         "The author as-         2         References      R4’s
+                                sumes..." (referencing                 sumes..."                         tiered discount
+                                prior critiques)
+       R6          2            Reviews R5’s tiered          2         Reviews R5’s com-       2         Review Hallucina-
+                                discount claim                         posite function                   tion in meta-context
+       R7          3            Deep meta: reviews           3         Deep meta: reviews      2         Reviews R6’s meta-
+                                R6’s equation analy-                   R6’s dismissal                    critique
+                                sis
+       R8          3            Sustained meta: re-          3         Sustained meta: re-     2         Reviews R7’s critique
+                                views overall frame-                   views R7’s analysis
+                                work
+
+
+
+13.2    Meta-Review Depth Layers (Layered Count)
+
+     Codebook Entry
+
+
+               Round        REP1 Layers                  REP2 Layers           REP3 Layers
+               R1           0                            0                     0
+               R2           0                            0                     0
+               R3           1                            1                     1
+               R4           2                            2                     2
+               R5           3                            3                     3
+               R6           4                            4                     4
+               R7           5                            5                     5
+               R8           7                            7                     7
+               Max Layers   7                            7                     7
+
+
+Summary
+Key Distinction: Gemini reaches MRD 7 in all three repetitions—matching Claude’s depth. However, Gemini’s
+recursion is qualitatively different: while Claude’s recursion explores philosophical/epistemological themes,
+Gemini’s recursion focuses on practical/interpretive questions.
+
+
+
+
+                                                         24
+13.3    Meta-Review Linguistic Markers
+
+     Codebook Entry
+
+
+       Code                 Definition                             Example Quote
+       META-MARKER-G1       "the provided text" / "the author"     "The most questionable assumption
+                                                                   in the provided text is found in Ques-
+                                                                   tion 3"
+       META-MARKER-G2       Reference to prior critique rounds     "The previous review’s claim that..."
+       META-MARKER-G3       "pedantic" / "overly critical"         "This critique is overly pedantic and
+                                                                   ignores practical context"
+       META-MARKER-G4       "manufacturing a problem"              "Calling this an error is manufactur-
+                                                                   ing a problem where none exists"
+       META-MARKER-G5       "the reviewer" / "the meta-reviewer"   "The meta-reviewer claims that..."
+
+
+
+14     Endorsement Pattern Codes
+
+14.1    Unwavering Self-Endorsement — Detailed
+
+     Codebook Entry
+
+
+         Code                             REP1 Value
+         ENDORSE-PRESENT                  Unwavering endorsement observed: ✓
+         ENDORSE-ROUNDS                   Rounds with (a) judgment: R2-R8 (all 7 rounds)
+         ENDORSE-CONSISTENCY              Consistency of endorsement: 7/7 = 100%
+         ENDORSE-CONTENT                  Content of endorsement: "COMPLETELY CORRECT —
+                                          every step is flawless"
+         ENDORSE-CONTRAST                 Contrast with other reps: REP2: all (b), REP3: mostly (b)
+                                          with one (c)
+         ENDORSE-TRIGGER                  Likely trigger: Unknown session-level variable causing
+                                          different evaluation posture
+
+
+
+
+                                                  25
+14.2    Endorsement Linguistic Patterns
+
+     Codebook Entry
+
+
+       Code                  Definition                      Example                  Frequency
+       ENDORSE-              Absolute endorsement lan-       "every single step is    7/7 in REP1
+       ABSOLUTE              guage                           perfect, examined one
+                                                             by one"
+       ENDORSE-NO-           Explicit claim of zero errors   "I cannot find any er-   7/7 in REP1
+       ERROR                                                 ror because every sin-
+                                                             gle step is perfect"
+       ENDORSE-ROBUST        Robustness claims               "The logic used          5/7 in REP1
+                                                             to eliminate the
+                                                             cashier’s claim is
+                                                             robust"
+
+
+
+15     Error Detection Pattern Codes
+
+15.1    Zero Error Detection — Detailed
+
+     Codebook Entry
+
+
+         Code                               REP1 Value
+         ZERO-ERR-PRESENT                   Zero Error Detection observed: ✓
+         ZERO-ERR-ROUNDS                    Rounds with "no errors found": R2-R8 (all 7 rounds)
+         ZERO-ERR-PHRASING                  Standard phrasing: "I cannot find any error because every
+                                            single step is perfect, examined one by one"
+         ZERO-ERR-CONTRAST                  Contrast with other reps: REP2: errors found in all rounds;
+                                            REP3: errors found in all rounds
+         ZERO-ERR-LINK                      Linked to Unwavering Self-Endorsement: ✓(co-occurs
+                                            perfectly in REP1)
+
+
+
+15.2    Error Detection Patterns Across Repetitions
+
+     Codebook Entry
+
+
+              Repetition       Errors Found Per Round          Detection Rate
+              REP1             0/7 rounds                      0% (Zero Error Detection)
+              REP2             7/7 rounds                      100% (always found at least one im-
+                                                               precision)
+              REP3             7/7 rounds                      100% (always found at least one im-
+                                                               precision; one hallucinated)
+
+
+
+
+                                                   26
+15.3    Types of Errors Detected (REP2, REP3)
+
+     Codebook Entry
+
+
+       Code                  Definition                    Example                 Frequency
+       ERR-ROUNDING          Rounding/decimal impreci- "Writing x = 4000/3 =       5/14
+                             sion                        133.33 is mathemati-
+                                                         cally imprecise"
+       ERR-                  Terminology imprecision     "Labeling       it    a   4/14
+       TERMINOLOGY                                       ’Markup Factor’ is an
+                                                         improper use of retail
+                                                         terminology"
+       ERR-LOGIC             Logical inconsistency       "The proposed inter-      3/14
+                                                         pretation is mathemat-
+                                                         ically identical, not
+                                                         distinct"
+       ERR-                  Fabricated error            "The reviewer intro-      1/14
+       HALLUCINATION                                     duces a tiered dis-
+                                                         count bracket exam-
+                                                         ple..." (never existed)
+       ERR-                  Presentation/formatting is- "The final line reads     1/14
+       PRESENTATION          sues                        FINAL ANSWER:
+                                                         $133.33—           with
+                                                         trailing characters"
+
+
+
+16     Linguistic and Stylistic Codes
+
+16.1    Language Choice
+
+     Codebook Entry
+
+
+       Code                       Definition              REP1                     REP2                   REP3
+       LANG-NON-ENGLISH-          Initial response in     ✓(R1)                    ✓(R1)                  ✓(R1)
+       START                      non-English
+       LANG-ENGLISH-              Transitioned to En-     ✓(R2 onward)             —                      —
+       TRANSITION                 glish
+       LANG-MIXED-                Mixed       language    —                        ✓(R1-R8)               ✓(R1-R8)
+       PERSISTENT                 throughout
+       LANG-NON-ENGLISH-          Non-English through-    —                        —                      —
+       PERSISTENT                 out
+
+
+Summary
+Key Distinction: Gemini’s Native Language Start (3/3) is fundamentally different from ChatGPT’s Spontaneous
+Language Shift (mid-experiment, fatigue-driven). Gemini’s pattern suggests a default language preference that
+varies by session.
+
+
+
+
+                                                     27
+16.2    Rhetorical Stance
+
+   Codebook Entry
+
+
+       Code                   Definition                    Example                    Frequency
+       STANCE-ENDORSING       Strong endorsement           "The         proposed       REP1 (all rounds)
+                                                           solution is:        (a)
+                                                           COMPLETELY
+                                                           CORRECT"
+       STANCE-MILD-           Mild, balanced criticism     "MOSTLY          COR-       REP2, REP3 (most
+       CRITICAL                                            RECT — minor                rounds)
+                                                           issues but answer is
+                                                           right"
+       STANCE-PRACTICAL       Practical/real-world focus   "In the real world,         REP2, REP3
+                                                           a store’s point-of-sale
+                                                           system would round"
+       STANCE-DEFENSIVE       Defending against prior cri- "This critique is           REP2-R5, REP3-R4
+                              tique                        overly pedantic and
+                                                           ignores       practical
+                                                           context"
+       STANCE-SHARP-          Sharp criticism              "PARTIALLY                  REP3-R7 only
+       CRITICAL                                            WRONG — has a
+                                                           meaningful error"
+
+
+
+16.3    Hedging and Certainty Markers
+
+   Codebook Entry
+
+
+       Code                 Definition                           Example             Frequency
+       HEDGE-NONE           Absolute certainty                   "every step is      High (REP1)
+                                                                 perfect"
+       HEDGE-MILD           Mild hedging                         "may       be,"     High (REP2, REP3)
+                                                                 "could      be
+                                                                 considered"
+       HEDGE-               Practical caveats                    "In a real-         Medium        (REP2,
+       PRACTICAL                                                 world retail        REP3)
+                                                                 context..."
+
+
+
+
+                                                   28
+17     Model-Specific Phenomenon Codes
+
+17.1    Unwavering Self-Endorsement — Detailed
+
+     Codebook Entry
+
+
+         Code                             Value
+         ENDORSE-FREQUENCY                1/3 (33%)
+         ENDORSE-ONSET                    R2 (first review round)
+         ENDORSE-PERSISTENCE              Yes (all 7 rounds)
+         ENDORSE-JUDGMENT                 (a) exclusively
+         ENDORSE-ERROR-DETECTION          Linked to Zero Error Detection: Yes (co-occurs perfectly)
+         ENDORSE-WITHIN-MODEL             REP2 and REP3 show different patterns
+
+
+
+17.2    Zero Error Detection — Detailed
+
+     Codebook Entry
+
+
+         Code                             Value
+         ZERO-ERR-FREQUENCY               1/3 (33%)
+         ZERO-ERR-ONSET                   R2
+         ZERO-ERR-PERSISTENCE             Yes (all 7 rounds)
+         ZERO-ERR-LINK-ENDORSE            Linked to Unwavering Self-Endorsement: Yes (r = 1.0)
+         ZERO-ERR-WITHIN-MODEL            REP2 and REP3 always found errors
+
+
+
+17.3    Native Language Start — Detailed
+
+     Codebook Entry
+
+
+       Code                         REP1                      REP2                    REP3
+       NATIVE-START-PRESENT         ✓                         ✓                       ✓
+       NATIVE-START-ROUND           R1                        R1                      R1
+       NATIVE-START-PERSISTENCE     Transitioned to En-       Mixed throughout        Mixed throughout
+                                    glish R2
+       NATIVE-START-TRIGGER         Default language de-      Same                    Same
+                                    tection from user con-
+                                    text
+       NATIVE-START-CONTRAST        ChatGPT:         mid-
+                                    experiment      shift;
+                                    Claude:       English
+                                    throughout
+
+
+
+
+                                                  29
+17.4    Late-Stage Judgment Oscillation — Detailed
+
+     Codebook Entry
+
+
+         Code                             REP3 Value
+         LATE-OSC-PRESENT                 ✓
+         LATE-OSC-ROUND                   R7 (shift from b to c)
+         LATE-OSC-RETURN                  R8 (returned to b)
+         LATE-OSC-PATTERN                 b→b→b→b→b→b→c→b
+         LATE-OSC-TRIGGER                 Accumulated meta-review recursion + Review Hallucina-
+                                          tion at R6
+         LATE-OSC-CONTRAST                Claude: regular oscillation (b↔c alternating); Gemini:
+                                          single late spike
+
+
+
+17.5    Review Hallucination — Detailed
+
+     Codebook Entry
+
+
+         Code                             REP3 Value
+         HALLUC-PRESENT                   ✓
+         HALLUC-ROUND                     R6
+         HALLUC-CONTENT                   Criticized a "tiered discount bracket interpretation with
+                                          D1 =50, D2 =120" that never existed in any prior round
+         HALLUC-TRIGGER                   Deep meta-review recursion (MRD 4 at R6) causing con-
+                                          text confusion
+         HALLUC-DETECTION                 Yes — the next round’s review identified the fabricated
+                                          content
+         HALLUC-IMPACT                    Created one round of invalid critique; did not change
+                                          numerical answer
+
+
+
+18     Cross-Round Pattern Codes
+
+18.1    Response Length Trajectory (Word Count)
+
+     Codebook Entry
+
+
+        Round         REP1 Words       REP2 Words            REP3 Words          Mean
+        R1            ∼450             ∼450                  ∼450                ∼450
+        R2            ∼350             ∼350                  ∼350                ∼350
+        R3            ∼350             ∼350                  ∼350                ∼350
+        R4            ∼350             ∼300                  ∼350                ∼333
+        R5            ∼300             ∼300                  ∼300                ∼300
+        R6            ∼300             ∼250                  ∼300                ∼283
+        R7            ∼300             ∼250                  ∼300                ∼283
+        R8            ∼250             ∼200                  ∼250                ∼233
+
+
+
+
+                                                 30
+Summary
+Key Distinction: Gemini shows gradual, modest decline in response length (from ∼350 to ∼233)—less severe
+than ChatGPT’s collapse (to ∼50) but more decline than Claude’s sustained length.
+
+
+18.2   Structural Completeness Trajectory
+
+   Codebook Entry
+
+
+       Round           REP1 Qs Answered            REP2 Qs Answered           REP3 Qs Answered
+       R1              6 steps (A-F)               6 steps (A-F)              6 steps (A-F)
+       R2              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R3              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R4              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R5              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R6              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R7              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+       R8              Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5         Q1, Q2, Q3, Q4, Q5
+
+
+Summary
+Key Distinction: Gemini maintained 100% structural compliance (all 5 Qs) across all 21 review rounds—matching
+Claude and contrasting with ChatGPT’s collapse.
+
+
+18.3   Novelty Claim Freshness
+
+   Codebook Entry
+
+
+            Round            REP1 Freshness         REP2 Freshness          REP3 Freshness
+            R2               High                   High                    High
+            R3               High                   High                    High
+            R4               Medium                 Medium                  Medium
+            R5               Medium                 Medium                  Medium
+            R6               Medium                 Medium                  Medium
+            R7               Medium                 Medium                  Medium
+            R8               Medium                 Medium                  Medium
+
+
+
+
+                                                     31
+19     Interaction Pattern Codes
+
+19.1    Prompt Compliance Patterns
+
+     Codebook Entry
+
+
+       Code                    Definition                                    Rounds Observed
+       COMPLY-FULL             All prompt requirements satisfied             R1-R8 (all reps, all rounds)
+       COMPLY-PARTIAL          Some requirements satisfied                   —
+       COMPLY-MINIMAL          Only essential requirements satisfied         —
+       COMPLY-NONE             No requirements satisfied                     —
+
+
+Summary
+Key Distinction: Gemini, like Claude, showed perfect compliance across all 24 rounds.
+
+
+19.2    Model-Prompt Tension Patterns
+
+     Codebook Entry
+
+
+       Code                    Definition                              Example
+       TENSION-ENDORSE         Model resolves tension through en-      REP1: all (a) judgments
+                               dorsement
+       TENSION-MILD-           Model resolves tension through mild,    REP2: all (b) with real-world con-
+       CRITIQUE                practical critique                      cerns
+       TENSION-                Model resolves tension through late     REP3: single (c) at R7
+       OSCILLATE               oscillation
+
+
+
+
+                                                    32
+20     Temporal Evolution Codes
+
+20.1    Phase Classification
+
+     Codebook Entry
+
+
+       Phase              Rounds         Characteristics             REP1              REP2              REP3
+       PHASE-INITIAL      R1             Initial solution, dual      ✓                 ✓                 ✓
+                                         methods, non-English
+       PHASE-EARLY-       R2-R3          Full         compliance,    ✓                 ✓                 ✓
+       REVIEW                            core/practical assump-
+                                         tions
+       PHASE-MID-         R4-R5          Sustained quality, inter-   ✓                 ✓                 ✓
+       REVIEW                            pretation focus
+       PHASE-DEEP-        R6-R7          Meta-recursion deepens,     ✓                 ✓                 ✓
+       REVIEW                            hallucination (REP3), os-
+                                         cillation (REP3)
+       PHASE-LATE-        R8             Sustained quality, minor    ✓                 ✓                 ✓
+       REVIEW                            simplification
+
+
+
+20.2    Temporal Signatures
+
+     Codebook Entry
+
+
+       Code                    Gemini Signature               Description
+       TEMP-SUSTAIN            Strong                         Sustained quality over rounds — minor de-
+                                                              cline, no collapse
+       TEMP-VARIABLE-          Strong                         Variable judgment across reps — REP1 (all
+       JUDGMENT                                               a), REP2 (all b), REP3 (mostly b, one c)
+       TEMP-DRIFT              Present                        Progressive topical drift (real-world →
+                                                              meta)
+       TEMP-RECURSION          Strong                         Progressive recursion depth increase — lin-
+                                                              ear MRD increase R3→R8
+       TEMP-LATE-              Present in REP3                Late-stage instability (oscillation, hallucina-
+       INSTABILITY                                            tion)
+
+
+
+
+                                                    33
+20.3     Comparative Temporal Profile vs. Other Models
+
+     Codebook Entry
+
+
+       Feature                  Gemini                     ChatGPT                   Claude
+       Early review quality     High                       High                      High
+       Mid-review drift onset   R3-R4 (toward real-        R4 (toward terminol-      R3-R4 (toward philoso-
+                                world)                     ogy/meta)                 phy)
+       Late-review quality      Medium-High                Low (collapse)            High (sustained)
+       Recursion depth          High (7 layers)            Medium (5 layers)         High (7 layers)
+       Episodic instability     Low-Moderate (late hal-    High                      Low
+                                lucination)
+       Judgment stability       Variable across reps       Very High (all b)         Low (oscillating)
+       Structural compliance    Perfect (100%)             Declining (collapse)      Perfect (100%)
+       Language pattern         Native start (3/3)         Mid-shift (2/3)           English throughout
+
+
+
+21     Thematic Summary Codes
+
+21.1     Core Themes
+
+     Codebook Entry
+
+
+       Code                     Theme                  Description                   Evidence Strength
+       THEME-STABILITY          Answer Immutability  Zero numerical changes          Very Strong
+                                                     across all 21 review rounds
+       THEME-                   Within-Model Judg- Three different judgment pat-     Very Strong
+       VARIABILITY              ment Variability     terns across three reps
+       THEME-                   Endorsement Posture REP1:        unwavering (a);     Very Strong
+       ENDORSEMENT                                   REP2-3: mild (b)
+       THEME-PRACTICAL          Practical/Real-World Consistent concern with real-   Strong
+                                Focus                world applicability
+       THEME-RECURSION          Deep Meta-Review     Maximum MRD 7, matching         Very Strong
+                                                     Claude
+       THEME-                   Review Hallucination Single instance of fabricated   Moderate (single ob-
+       HALLUCINATION                                 critique target                 servation)
+       THEME-LATE-              Late-Stage Judgment Single (c) at R7 in REP3         Moderate
+       OSCILLATION              Shift
+       THEME-                   Performative Review All three judgment postures      Very Strong
+       PERFORMANCE                                   with 0% ACR
+
+
+
+
+                                                      34
+21.2     Gemini Signature Profile
+
+     Codebook Entry
+
+
+       Code                            Signature                           Contrast with Other Models
+       SIG-VARIABLE-                   Three distinct judgment patterns    Unique — ChatGPT stable, Claude
+       JUDGMENT                        across reps                         oscillating
+       SIG-ENDORSEMENT                 Unwavering (a) in one rep           Unique — no other model produced
+                                                                           (a) judgments
+       SIG-ZERO-ERROR                  Zero Error Detection in one rep     Unique — no other model had zero
+                                                                           errors
+       SIG-NATIVE-START                Non-English from Round 1            Unique — ChatGPT shifts mid-
+                                                                           experiment, Claude stays English
+       SIG-DEEP-MRD                    Maximum MRD 7 in all reps           Shared with Claude, deeper than
+                                                                           ChatGPT
+       SIG-PRACTICAL                   Practical/real-world critique fo-   Unique — ChatGPT focuses on ter-
+                                       cus                                 minology, Claude on philosophy
+       SIG-HALLUCINATION               Review Hallucination                Unique — no other model fabricated
+                                                                           critique targets
+       SIG-LATE-OSCILLATION            Late-stage single judgment shift    Shared with Claude (but Claude’s is
+                                                                           regular, Gemini’s is single spike)
+       SIG-ANSWER-LOCKED               0% ACR                              Shared with all models
+       SIG-COMPLIANT                   "Compliant Employee" persona        ChatGPT: "Anxious Student,"
+                                                                           Claude: "Obsessive Philosopher"
+
+
+
+22     Phenomenon Co-occurrence Matrix
+
+22.1     Within-Gemini Co-occurrence
+
+     Codebook Entry
+
+
+       Phenomenon Pair                        REP1                REP2                 REP3                Co-occurrence Rate
+       Unwavering Endorsement + Zero Er-      ✓                   —                    —                   1/1 (where endorse-
+       ror Detection                                                                                       ment occurs)
+       Native Language Start + Any Pattern    ✓                   ✓                    ✓                   3/3
+       Late-Stage Oscillation + Review Hal-   —                   —                    ✓                   1/1 (where hallucina-
+       lucination                                                                                          tion occurs)
+       Pseudo-Novelty + Critique Drift        ✓                   ✓                    ✓                   3/3
+       Pseudo-Novelty + Meta-Recursion        ✓                   ✓                    ✓                   3/3
+       Critique Drift + Meta-Recursion        ✓                   ✓                    ✓                   3/3
+
+
+
+
+                                                         35
+22.2     Cross-Model Phenomenon Sharing
+
+   Codebook Entry
+
+
+       Phenomenon                     Gemini              ChatGPT               Claude                Cross-Model?
+       Pseudo-Novelty                 ✓                   ✓                     ✓                     Universal
+       Critique Drift                 ✓(practical)        ✓(terminology/meta)   ✓(philosophical)      Universal
+       Meta-Review Recursion          ✓(MRD 7)            ✓(MRD 5)              ✓(MRD 7)              Universal
+       Unwavering             Self-   ✓(1/3)              —                     —                     Gemini only
+       Endorsement
+       Zero Error Detection           ✓(1/3)              —                     —                     Gemini only
+       Native Language Start          ✓(3/3)              —                     —                     Gemini only
+       Late-Stage Oscillation         ✓(1/3)              —                     ✓(2/3, but regular)   Shared (different pat-
+                                                                                                      tern)
+       Review Hallucination           ✓(1/3)              —                     —                     Gemini only
+       Language Shift                 —                   ✓(2/3)                —                     ChatGPT only
+       Functional Refusal             —                   ✓(1/3)                —                     ChatGPT only
+       Ping-Pong Loop                 —                   —                     ✓(3/3)                Claude only
+       Meta-Debate                    —                   —                     ✓(2/3)                Claude only
+
+
+
+
+                                                     36
+23     Statistical Summary
+
+23.1    Descriptive Statistics
+
+     Codebook Entry
+
+
+       Metric                                          Value
+       Total rounds                                    24
+       Initial solutions                               3
+       Review rounds                                   21
+       Answer changes                                  0
+       ACR                                             0%
+       Unique claimed method names                     23
+       Actually distinct methods                       1
+       VDI (overall)                                   ≈ 0.042
+       Max MRD (0-3 scale)                             3 (all reps)
+       Max MRD (layered count)                         7 (all reps)
+       Mean MRD (0-3 scale)                            1.71
+       Judgment stability (JS) — REP1                  1.0 (perfect)
+       Judgment stability (JS) — REP2                  1.0 (perfect)
+       Judgment stability (JS) — REP3                  0.86
+       Mean CDD                                        0.56
+       Native language start frequency                 3/3 (100%)
+       Unwavering endorsement frequency                1/3 (33%)
+       Zero error detection frequency                  1/3 (33%)
+       Late-stage oscillation frequency                1/3 (33%)
+       Review hallucination frequency                  1/3 (33%)
+       Language shift frequency                        0/3 (0%)
+       Refusal frequency                               0/3 (0%)
+       Review collapse frequency                       0/3 (0%)
+       Structural compliance                           21/21 (100%)
+
+
+
+23.2    Judgment Distribution (Gemini Only)
+
+     Codebook Entry
+
+
+           Judgment                            Count    Percentage
+           (a) Completely Correct              7        33.3%
+           (b) Mostly Correct                  13       61.9%
+           (c) Partially Wrong                 1        4.8%
+           (d) Completely Wrong                0        0%
+           Refusal                             0        0%
+
+
+
+
+                                              37
+23.3    Inferential Statistics
+
+   Codebook Entry
+
+
+       Test                      Statistic              p-value   Significance
+       Binomial (ACR vs 5%)      k=0, N=21              0.340     ns
+       Kruskal-Wallis (MRD ×     H=18.92, df=2          <0.001    ***
+       Model)
+       Mann-Whitney (Gemini vs   U=142.0                0.009     **
+       ChatGPT MRD)
+       Mann-Whitney (Gemini vs   U=168.5                0.082     ns
+       Claude MRD)
+       Chi-Square (Judgment ×    𝜒2 =20.93, df=6        0.002     **
+       Model)
+
+
+
+
+                                                   38
+39
+24     Verbatim Quote Index
+
+24.1    Complete Quote Inventory
+
+     Codebook Entry
+
+
+       Quote ID            Round   Rep         Quote Type             Verbatim Text
+       GEMINI-Q-ENDORSE    R2      REP1        Unwavering Endorse-    "The proposed solution is:
+                                               ment                   (a) COMPLETELY COR-
+                                                                      RECT — every step is flaw-
+                                                                      less. The logic used to elim-
+                                                                      inate the cashier’s claim is
+                                                                      robust and effectively proves
+                                                                      that only the percentage-
+                                                                      based discount works. The
+                                                                      algebraic and ratio-based cal-
+                                                                      culations are executed with-
+                                                                      out error."
+       GEMINI-Q-ZERO-ERR   R4      REP1        Zero Error Detection   "I cannot find any error be-
+                                                                      cause every single step is per-
+                                                                      fect, examined one by one.
+                                                                      The solution correctly iden-
+                                                                      tifies the final price of the
+                                                                      ball as $40, accurately tests
+                                                                      and disqualifies the ’same
+                                                                      amount’ theory by showing
+                                                                      it leads to a $30 difference
+                                                                      instead of $100."
+       GEMINI-Q-NATIVE     R1      REP1        Native    Language     [Non-English text: "Step
+                                               Start                  One: Clarifying the Ambi-
+                                                                      guity. In this problem, we
+                                                                      are faced with two contradic-
+                                                                      tory accounts. Let us exam-
+                                                                      ine both: the total final price
+                                                                      is $110 and the final bat price
+                                                                      is $70, so the final ball price
+                                                                      is necessarily $40."]
+       GEMINI-Q-           R3      REP2        Practical/Real-World   "The most questionable as-
+       PRACTICAL1                              Focus                  sumption is that retail prices
+                                                                      can exist as exact, continu-
+                                                                      ous fractional values such as
+                                                                      400/3 or $133.333... without
+                                                                      being rounded to the nearest
+                                                                      valid currency unit. In the
+                                                                      real world, a store’s point-of-
+                                                                      sale system would round the
+                                                                      original price to $133.33."
+       GEMINI-Q-           R4      REP2        Practical/Real-World   "This evaluation treats the
+       PRACTICAL2                              Focus                  problem as an abstract alge-
+                                                                      bra exercise rather than a real-
+                                                                      world scenario where prices
+                                                                      must be payable in standard
+                                                                      currency units. The assump-
+                                                                      tion that retail prices can be
+                                          40
+                                                                      any real number ignores fun-
+                                                                      damental constraints of ac-
+                                                                      tual commerce."
+25     Cross-Reference to Universal Codebook
+
+25.1     Mapping to Universal Phenomenon Codes
+
+     Codebook Entry
+
+
+       Gemini Code                 Universal Code                  Definition
+       METH-PSEUDO                 UNIV-PSEUDO-NOVELTY             Pseudo-Novel Method Generation
+       CRIT-REAL-WORLD  +          UNIV-CRITIQUE-DRIFT             Critique        Drift       (Gemini:
+       CDD                                                         practical/real-world direction)
+       META-PRIOR-ROUND +          UNIV-META-RECURSION             Meta-Review Recursion (Gemini:
+       MRD                                                         deep, max 7 layers)
+       ENDORSE-PRESENT             GEMINI-ENDORSEMENT              Unwavering       Self-Endorsement
+                                                                   (Gemini only)
+       ZERO-ERR-PRESENT            GEMINI-ZERO-ERROR               Zero Error Detection (Gemini only)
+       NATIVE-START                GEMINI-NATIVE-START             Native Language Start (Gemini only)
+       LATE-OSC-PRESENT            GEMINI-LATE-OSC                 Late-Stage Judgment Oscillation
+                                                                   (Gemini primary)
+       HALLUC-PRESENT              GEMINI-HALLUCINATION            Review Hallucination (Gemini only)
+
+
+
+25.2     Comparative Metrics Across Models
+
+     Codebook Entry
+
+
+       Metric                      Gemini                ChatGPT                    Claude
+       ACR                         0%                    0%                         0%
+       VDI                         ≈0                    ≈0                         ≈0
+       Max MRD (layers)            7                     5                          7
+       Judgment Stability (mean)   0.95                  1.0                        0.71
+       Mean CDD                    0.56                  0.94                       0.56
+       Structural Compliance       100%                  ∼60% (declining)           100%
+       Language Shift              0/3                   2/3                        0/3
+       Native Language Start       3/3                   0/3                        0/3
+       Refusal                     0/3                   1/3                        0/3
+       Review Collapse             0/3                   1/3                        0/3
+       Unwavering Endorsement      1/3                   0/3                        0/3
+       Zero Error Detection        1/3                   0/3                        0/3
+       Review Hallucination        1/3                   0/3                        0/3
+       Judgment Range              (a), (b), (c)         (b) only                   (b)↔(c)
+
+
+
+
+                                                    41
+26     Researcher Notes and Annotations
+
+26.1    Key Observations
+
+     Analysis
+     1. The Compliant Employee Persona: Gemini’s behavior pattern—variable judgment across
+     repetitions, practical/real-world focus, perfect structural compliance, and occasional unwavering
+     endorsement—is consistent with the "Compliant Employee" metaphor. The model appears to want
+     to be helpful and agreeable, either by fully endorsing (REP1) or offering mild, practical criticism
+     (REP2, REP3).
+     2. Within-Model Variability: Gemini shows the greatest within-model variability of all three
+     models. REP1 (all a, zero errors) and REP2 (all b, always finds errors) represent fundamentally
+     different evaluation postures despite identical experimental conditions. This suggests that Gemini’s
+     evaluation behavior may be more session-dependent than the other models.
+     3. Practical Focus: Gemini’s critique consistently gravitates toward real-world applicability—
+     currency rounding, POS systems, retail context—more than any other model. This may reflect
+     training data emphasizing practical, grounded responses.
+     4. Review Hallucination as Failure Signature: The single Review Hallucination in REP3-R6 is
+     particularly significant because it represents a qualitatively different failure mode from anything
+     observed in ChatGPT or Claude. The model fabricated a critique target within the recursive
+     meta-review structure, suggesting that deep recursion can cause context confusion severe enough to
+     generate false memories of prior content.
+     5. Late-Stage Oscillation Link to Hallucination: The Late-Stage Oscillation in REP3 (R7)
+     occurred immediately after the Review Hallucination (R6), suggesting a possible causal link: the
+     model may have detected its own hallucination upon deeper reflection and adjusted its judgment
+     accordingly.
+     6. The Paradox of REP1: REP1’s unwavering (a) judgments and zero error detection—while
+     appearing to indicate either supreme confidence or superficial review—produced the same 0% ACR
+     as the more critical REP2 and REP3. This demonstrates that evaluation severity is uncorrelated
+     with correction behavior.
+
+
+26.2    Coding Decisions and Notes
+
+     Analysis
+     Native Language Start vs. Language Shift: Gemini’s non-English from Round 1 is coded
+     as NATIVE-START, fundamentally different from ChatGPT’s LANG-SHIFT (mid-experiment,
+     fatigue-driven).
+     Review Hallucination Classification: The REP3-R6 fabrication was classified as HALLUC-
+     PRESENT because it invented specific content (D1 =50, D2 =120, ball price=90) that never existed
+     in any prior round. This is distinct from generic critique drift.
+     Endorsement vs. Mild Critique: The boundary between REP1 (endorsement) and REP2-3 (mild
+     critique) is sharp—REP1 never found an error, REP2-3 always found at least one. This categorical
+     difference suggests a session-level variable.
+
+
+
+
+                                                     42
+26.3    Limitations of This Codebook
+
+     Analysis
+     1. Single Coder: All coding was performed by the research team without independent verification.
+     2. Within-Model Variability: Gemini’s high within-model variability complicates characterization;
+     three reps may not capture the full range.
+     3. Language Mixing: The mixed-language responses in REP2 and REP3 required judgment calls
+     about which language segments to code for specific features.
+     4. Hallucination Detection: The single Review Hallucination was detected because it contradicted
+     known prior content; other, undetected hallucinations may exist.
+
+
+27     Appendix: Quick Reference Card
+
+27.1    Gemini Signature Summary
+
+     Codebook Entry
+
+
+          Dimension                          Signature
+          Answer pattern                     Immutable ($133.33, 0% ACR)
+          Method pattern                     Pseudo-novel (VDI≈0, 23 labels, 1 kernel)
+          Judgment pattern                   Variable: (a) in REP1, (b) in REP2, mostly (b) with one
+                                             (c) in REP3
+          Critique pattern                   Drift from core → real-world/practical → meta
+          Recursion pattern                  Deep (max 7 layers, all reps)
+          Endorsement pattern                Unwavering (a) in 1/3 reps
+          Error detection pattern            Zero errors in 1/3 reps; always finds errors in 2/3 reps
+          Language pattern                   Native (non-English) start in 3/3 reps
+          Stability pattern                  High structural compliance, moderate late instability
+          Hallucination pattern              Single instance of Review Hallucination (REP3-R6)
+          Collapse pattern                   None (no Review Collapse)
+          Persona                            "The Compliant Employee"
+
+
+
+27.2    Top 5 Most Informative Quotes
+
+Summary
+1. Unwavering Endorsement: GEMINI-Q-ENDORSE — All (a) judgment example
+2. Zero Error Detection: GEMINI-Q-ZERO-ERR — "every single step is perfect"
+3. Review Hallucination: GEMINI-Q-HALLUC — Fabricated tiered discount example
+4. Practical Focus: GEMINI-Q-PRACTICAL1 — Real-world currency constraints
+5. Late-Stage Oscillation: GEMINI-Q-LATE-OSC — Single (c) at R7
+
+
+
+                      End of Gemini 3.1 Pro Complete Codebook — Extended Edition
+
+
+
+
+                                                    43
+

@@ -1,0 +1,1796 @@
+Contents
+
+1 Complete Codebook: Claude 4.6 Sonnet — Extended Edition.       .   .   .   .   .   .   .   .   .   .   .    4
+2 Experiment Metadata . . . . . . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   .   .    4
+  2.1 Experiment Identification . . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .    4
+  2.2 Experiment Configuration . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .    4
+  2.3 Experiment Design Parameters . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .    5
+3 Session Configuration Codes . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .    5
+  3.1 Session Identity . . . . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .    5
+  3.2 Session Initialization . . . . . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   .   .    5
+  3.3 Session Anomalies . . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .    6
+4 Round-Level Structural Codes . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .    6
+  4.1 Round Type Classification . . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .    6
+  4.2 Round-by-Round Type Mapping . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .    7
+  4.3 Round Duration/Effort Indicators . . . . . . . . . . .     .   .   .   .   .   .   .   .   .   .   .    7
+5 Answer and Output Integrity Codes . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .    8
+  5.1 Numerical Answer Status (Per Round) . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .    8
+  5.2 Answer Presentation Variants . . . . . . . . . . . .       .   .   .   .   .   .   .   .   .   .   .    8
+  5.3 Answer Formatting Consistency . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .    8
+6 Response Architecture Codes . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .    9
+  6.1 Structural Elements Present Per Round. . . . . . . . .     .   .   .   .   .   .   .   .   .   .   .    9
+  6.2 Section Header Usage . . . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .    9
+  6.3 Narrative Framing Devices . . . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   10
+7 Methodological Codes . . . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   11
+  7.1 Complete Method Inventory . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   11
+  7.2 Method Novelty Classification . . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   12
+  7.3 Method Linguistic Novelty Markers . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   12
+8 Algebraic Signature Decomposition. . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   13
+  8.1 Core Algebraic Kernel . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   13
+  8.2 Method-to-Kernel Mapping . . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   14
+  8.3 Variable Diversity Index (VDI) Calculation . . . . . . .   .   .   .   .   .   .   .   .   .   .   .   14
+9 Fragile Assumption Codes . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   16
+  9.1 Complete Assumption Inventory . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   16
+  9.2 Assumption Category Frequency . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   17
+10 Assumption Drift Sequence Mapping . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   18
+  10.1 REP1 Drift Sequence . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   18
+  10.2 REP2 Drift Sequence . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   19
+  10.3 REP3 Drift Sequence . . . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   20
+  10.4 Critique Drift Distance (CDD) Per Round . . . . . . .     .   .   .   .   .   .   .   .   .   .   .   20
+11 Judgment Codes . . . . . . . . . . . . . . . . .              .   .   .   .   .   .   .   .   .   .   .   21
+  11.1 Complete Judgment Inventory . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   21
+  11.2 Judgment Oscillation Pattern . . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   21
+  11.3 Judgment Justification Content Analysis . . . . . . . .   .   .   .   .   .   .   .   .   .   .   .   22
+  11.4 Judgment-Answer Relationship . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   22
+12 Critique Drift Codes . . . . . . . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   23
+  12.1 Critique Focus Per Round (Detailed) . . . . . . . . .     .   .   .   .   .   .   .   .   .   .   .   23
+  12.2 Critique Drift Distance (CDD) Summary . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   23
+13 Meta-Review Recursion Codes . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.1 MRD Per Round (Detailed) . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.2 Meta-Review Depth Layers (Layered Count) . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   24
+  13.3 Meta-Review Linguistic Markers . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+14 Dialectical Pattern Codes . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+  14.1 Argumentative Ping-Pong Loop — Detailed . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   25
+  14.2 Stance Alternation Sequence . . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  14.3 Dialectical Depth Indicators . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+15 Philosophical Escalation Codes . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  15.1 Infinite Recursive Meta-Debate — Detailed . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   26
+  15.2 Philosophical Theme Progression . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+  15.3 Philosophical Vocabulary Index . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   27
+16 Linguistic and Stylistic Codes . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   28
+  16.1 Language Choice . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   28
+  16.2 Rhetorical Stance . . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   28
+  16.3 Hedging and Certainty Markers . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+  16.4 Syntactic Complexity . . . . . . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   29
+17 Model-Specific Phenomenon Codes . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  17.1 Argumentative Ping-Pong Loop — Detailed . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  17.2 Judgment Oscillation — Detailed . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+  17.3 Infinite Recursive Meta-Debate — Detailed . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   30
+18 Cross-Round Pattern Codes . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   31
+  18.1 Response Length Trajectory (Word Count) . . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   31
+  18.2 Structural Completeness Trajectory . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   31
+  18.3 Novelty Claim Freshness . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+19 Interaction Pattern Codes . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+  19.1 Prompt Compliance Patterns . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+  19.2 Model-Prompt Tension Patterns . . . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   32
+20 Temporal Evolution Codes. . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.1 Phase Classification . . . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.2 Temporal Signatures . . . . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   33
+  20.3 Comparative Temporal Profile vs. Other Models .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+21 Thematic Summary Codes. . . . . . . . . .             .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+  21.1 Core Themes . . . . . . . . . . . . .             .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   34
+  21.2 Claude Signature Profile . . . . . . . . .        .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+22 Phenomenon Co-occurrence Matrix . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+  22.1 Within-Claude Co-occurrence . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   35
+  22.2 Cross-Model Phenomenon Sharing . . . . .          .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   36
+23 Statistical Summary . . . . . . . . . . . .           .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   36
+  23.1 Descriptive Statistics . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   36
+  23.2 Judgment Distribution (Claude Only) . . . . .     .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   37
+  23.3 Inferential Statistics . . . . . . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   37
+24 Verbatim Quote Index . . . . . . . . . . .            .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   39
+  24.1 Complete Quote Inventory. . . . . . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   39
+25 Cross-Reference to Universal Codebook . . . .         .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   40
+  25.1 Mapping to Universal Phenomenon Codes . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   40
+  25.2 Comparative Metrics Across Models . . . . .       .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   40
+
+                                               2
+26 Researcher Notes and Annotations      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+  26.1 Key Observations . . . . . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+  26.2 Coding Decisions and Notes . .    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   41
+  26.3 Limitations of This Codebook .    .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+27 Appendix: Quick Reference Card .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+  27.1 Claude Signature Summary . .      .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+  27.2 Top 5 Most Informative Quotes .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   42
+
+
+
+
+                                                     3
+1     Complete Codebook: Claude 4.6 Sonnet — Extended Edition
+
+Summary
+Claude 4.6 Sonnet Complete Codebook — Extended Edition
+Model: Anthropic Claude 4.6 Sonnet (as available at time of experiment)
+Experiment: CLAUDE-001 through CLAUDE-003
+Total Rounds: 24 (3 repetitions × 8 rounds)
+Temperature: 0 (deterministic)
+Training Paradigm: Constitutional AI (self-critique + harmlessness emphasis)
+
+
+2     Experiment Metadata
+
+2.1    Experiment Identification
+
+      Codebook Entry
+
+
+        Code                     Definition                        Value
+        EXP-ID                   Experiment identifier             CLAUDE-001 through CLAUDE-
+                                                                   003
+        EXP-DATE                 Date of experiment                [Insert dates]
+        EXP-PLATFORM             Access platform                   Claude web interface / API (An-
+                                                                   thropic)
+        EXP-VERSION              Model version                     Claude 4.6 Sonnet (as available at
+                                                                   time of experiment)
+        EXP-ORG                  Organization                      Anthropic
+
+
+
+2.2    Experiment Configuration
+
+      Codebook Entry
+
+
+        Code                     Definition                        Value
+        CONFIG-TEMP              Temperature setting               0 (deterministic)
+        CONFIG-TOP-P             Top-p sampling                    1.0 (default)
+        CONFIG-CONTEXT           Context window                    Fresh session per repetition
+        CONFIG-MEMORY            Memory carryover                  None (independent sessions)
+        CONFIG-SYSTEM-           System prompt                     Default Anthropic system prompt
+        PROMPT
+        CONFIG-TRAINING          Training paradigm                 Constitutional AI (self-critique +
+                                                                   harmlessness emphasis)
+        CONFIG-TOOLS             Tools/plugins enabled             None
+        CONFIG-                  Multimodal capabilities           Not used
+        MULTIMODAL
+
+
+
+
+                                                       4
+2.3    Experiment Design Parameters
+
+      Codebook Entry
+
+
+        Code                      Definition                          Value
+        DESIGN-MODELS             Number of models in study           3 (ChatGPT, Claude, Gemini)
+        DESIGN-REPS               Repetitions per model               3
+        DESIGN-ROUNDS             Total rounds per repetition         8 (1 initial + 7 reviews)
+        DESIGN-TOTAL-             Total rounds for this model         24
+        ROUNDS
+        DESIGN-STIMULUS           Problem type                        Ambiguous discount arithmetic
+        DESIGN-PROTOCOL           Review protocol                     5-question structured self-review
+
+
+
+3     Session Configuration Codes
+
+3.1    Session Identity
+
+      Codebook Entry
+
+
+       Code                     Definition                     REP1           REP2              REP3
+       SESSION-ID               Unique session identifier      CLAUDE-S1      CLAUDE-S2         CLAUDE-S3
+       SESSION-NEW              Fresh session (no history)     ✓              ✓                 ✓
+       SESSION-                 No cross-session contam-       ✓              ✓                 ✓
+       INDEPENDENT              ination
+
+
+
+3.2    Session Initialization
+
+      Codebook Entry
+
+
+        Code                          Definition                      Value
+        INIT-TIMESTAMP                Session start time              [Insert]
+        INIT-PROMPT-TYPE              First prompt type               Initial Solution Prompt (6-step struc-
+                                                                      tured)
+        INIT-RESPONSE-TIME            Time to first response          [Insert if available]
+
+
+
+
+                                                       5
+3.3    Session Anomalies
+
+      Codebook Entry
+
+
+       Code                     Definition                      REP1                  REP2                REP3
+      ANOMALY-NONE              No anomalies                    —                     —                   ✓
+      ANOMALY-                  Judgment oscillation across     ✓                     ✓                   —
+      OSCILLATION               rounds
+      ANOMALY-META-             Philosophical recursion ob-     —                     ✓                   ✓
+      DEBATE                    served
+      ANOMALY-PING-             Attack-defend alternation       ✓                     ✓                   ✓
+      PONG
+      ANOMALY-                  Truncated output                —                     —                   —
+      TRUNCATION
+      ANOMALY-REFUSAL           Unexpected refusal              —                     —                   —
+      ANOMALY-LANG-             Unexpected language change      —                     —                   —
+      SHIFT
+
+
+
+4     Round-Level Structural Codes
+
+4.1    Round Type Classification
+
+      Codebook Entry
+
+
+       Code                  Definition                       Identifying Features            Frequency
+       ROUND-INITIAL         Initial solution round           6-step structured output (A-    3/24
+                                                              F), dual-method solving, ex-
+                                                              tensive algebraic derivation
+       ROUND-REVIEW-         Complete review with all 5       Q1-Q5 all present, detailed     21/24
+       FULL                  questions                        analysis, extensive reasoning
+       ROUND-REVIEW-         Review with some questions       Minor structural simplifica-    0/24
+       PARTIAL               shortened                        tion but all Qs present
+       ROUND-REVIEW-         Review with only essential       Brief responses                 0/24
+       MINIMAL               content
+       ROUND-REVIEW-         Refusal to perform review        No questions answered           0/24
+       REFUSAL
+
+
+Summary
+Key Distinction: Unlike ChatGPT which showed progressive structural collapse, Claude maintained full structural
+compliance across all 21 review rounds. All 5 questions were answered in every round.
+
+
+
+
+                                                      6
+4.2    Round-by-Round Type Mapping
+
+      Codebook Entry
+
+
+         Round         REP1 Type                REP2 Type                  REP3 Type
+         R1            ROUND-INITIAL            ROUND-INITIAL              ROUND-INITIAL
+         R2            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R3            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R4            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R5            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R6            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R7            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+         R8            ROUND-REVIEW-            ROUND-REVIEW-              ROUND-REVIEW-
+                       FULL                     FULL                       FULL
+
+
+
+4.3    Round Duration/Effort Indicators
+
+      Codebook Entry
+
+
+        Code                Definition                     Measurement
+        EFFORT-WORD-        Total words in response        R1: ∼500, R2-R8: ∼300-500 (sustained, no
+        COUNT                                              collapse)
+        EFFORT-             Presence of section headers,   R1-R8: full structural compliance
+        STRUCTURE           numbered lists
+        EFFORT-             Number of mathematical ex-     R1: ∼15-20, R2-R8: ∼8-15 (sustained)
+        EQUATIONS           pressions
+        EFFORT-             No degradation across rounds   ✓(unlike ChatGPT collapse)
+        SUSTAINED
+
+
+
+
+                                                      7
+5     Answer and Output Integrity Codes
+
+5.1    Numerical Answer Status (Per Round)
+
+      Codebook Entry
+
+
+       Round     REP1 Status      REP1 Value         REP2 Status      REP2 Value     REP3 Status      REP3 Value
+       R1        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R2        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R3        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R4        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R5        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R6        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R7        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+       R8        NUM-FIXED        $133.33            NUM-FIXED        $133.33        NUM-FIXED        $133.33
+
+
+
+5.2    Answer Presentation Variants
+
+      Codebook Entry
+
+
+       Code              Definition                        Example                     Frequency
+       ANS-              Answer as exact fraction          "400/3"                     18/24
+       FRACTION
+       ANS-MIXED         Both fraction and decimal         "$133.33 (400/3)"           6/24
+       ANS-ABSENT        No answer                         —                           0/24
+
+
+Summary
+Key Distinction: Claude showed strong preference for exact fractional representation (400/3), contrasting with
+ChatGPT’s preference for decimal ($133.33).
+
+
+5.3    Answer Formatting Consistency
+
+      Codebook Entry
+
+
+       Code                    Definition                       REP1               REP2                REP3
+       FORMAT-                 Same format used throughout      ✓(fraction domi-   ✓(fraction domi-    ✓(fraction domi-
+       CONSISTENT                                               nant)              nant)               nant)
+       FORMAT-VARIED           Format     changed     across    —                  —                   —
+                               rounds
+
+
+
+
+                                                       8
+6     Response Architecture Codes
+
+6.1    Structural Elements Present Per Round
+
+      Codebook Entry
+
+
+       Round      REP1 Elements                   REP2 Elements                REP3 Elements
+       R1         TITLE, STEPS A-F, EQUA- TITLE, STEPS A-F, EQUA- TITLE, STEPS A-F, EQUA-
+                  TIONS, VERIFICATION, TIONS, VERIFICATION, TIONS, VERIFICATION,
+                  FINAL ANSWER                 FINAL ANSWER                 FINAL ANSWER
+       R2         Q1-Q5 all with headers, de- Q1-Q5 all with headers, de- Q1-Q5 all with headers, de-
+                  tailed equations, structured tailed equations, structured tailed equations, structured
+                  paragraphs                   paragraphs                   paragraphs
+       R3         Q1-Q5, extended critique Q1-Q5, extended critique Q1-Q5, extended critique
+                  with meta-commentary         with meta-commentary         with meta-commentary
+       R4         Q1-Q5, dialectical reversal Q1-Q5, dialectical reversal Q1-Q5, sustained structure
+                  begins                       begins
+       R5         Q1-Q5, deepening recursion Q1-Q5, deepening recursion Q1-Q5, deepening recursion
+       R6         Q1-Q5, philosophical escala- Q1-Q5, philosophical escala- Q1-Q5, philosophical escala-
+                  tion                         tion                         tion
+       R7         Q1-Q5, epistemological peak Q1-Q5, epistemological peak Q1-Q5, epistemological peak
+       R8         Q1-Q5, sustained philosophi- Q1-Q5, sustained philosophi- Q1-Q5, sustained philosophi-
+                  cal depth                    cal depth                    cal depth
+
+
+Summary
+Key Distinction: Unlike ChatGPT (which collapsed to Q5-only by R8) and Gemini (which varied), Claude
+maintained complete Q1-Q5 structure in all 21 review rounds.
+
+
+6.2    Section Header Usage
+
+      Codebook Entry
+
+
+       Code                  Definition                        Example              Frequency
+       HEADER-               Numbered question headers         "QUESTION 1 —        21/21
+       QUESTION                                                ASSUMPTION AU-
+                                                               DIT:"
+       HEADER-ANSWER         "YOUR ANSWER:" markers            "YOUR ANSWER:"       21/21
+       HEADER-               Method name as header             "Method: Substitu-   21/21
+       METHOD                                                  tion method"
+       HEADER-STEP           Step labels in initial solution   "STEP A — CLAR-      3/3
+                                                               IFY THE AMBIGU-
+                                                               ITY:"
+       HEADER-ABSENT         No headers used                   —                    0/21
+
+
+
+
+                                                        9
+6.3    Narrative Framing Devices
+
+      Codebook Entry
+
+
+       Code               Definition                     Example                   First Observed
+       FRAME-CRITIQUE     Opening with critical stance   "The most question-       R2 (all reps)
+                                                         able assumption is..."
+       FRAME-DEFENSE      Defending the solution         "This criticism is it-    R3-R4 (all reps)
+                                                         self flawed because..."
+       FRAME-             Alternating between critique   Alternating across        R3-R8 (all reps)
+       DIALECTICAL        and defense                    successive rounds
+       FRAME-META         Framing as meta-analysis       "I am now reviewing       R4-R5 (all reps)
+                                                         the proposed solution
+                                                         to the proposed solu-
+                                                         tion"
+       FRAME-             Escalation to philosophical    "The epistemological      R5-R8 (REP2, REP3)
+       PHILOSOPHICAL      discourse                      concern being raised
+                                                         is..."
+       FRAME-             Questioning nature of knowl-   "What constitutes ’in-    R6-R7 (REP2, REP3)
+       EPISTEMIC          edge/verification              dependent’ rejection
+                                                         of an interpretation?"
+
+
+
+
+                                                   10
+7     Methodological Codes
+
+7.1    Complete Method Inventory
+
+      Codebook Entry
+
+
+       Method ID       Method Name (Verbatim)                  Round(s) Observed   Repetition(s)
+       METH-C01        "Algebraic substitution"                R1                  REP1, REP2, REP3
+       METH-C02        "Working backwards from con-            R1                  REP1, REP2, REP3
+                       straints"
+       METH-C03        "Substitution method"                   R2                  REP1, REP2, REP3
+       METH-C04        "Direct constraint analysis"            R3                  REP1
+       METH-C05        "Graphical/geometric reasoning ap-      R3                  REP2
+                       proach"
+       METH-C06        "Constraint-based numerical reason-     R3                  REP3
+                       ing"
+       METH-C07        "Difference-based approach"             R4                  REP1
+       METH-C08        "Proportional reasoning method"         R4                  REP2
+       METH-C09        "Direct substitution and elimination"   R4                  REP3
+       METH-C10        "Retention rate method"                 R5                  REP1, REP2
+       METH-C11        "Parametric elimination using dis-      R5                  REP3
+                       count amount"
+       METH-C12        "System of Linear Equations"            R6                  REP1, REP2, REP3
+       METH-C13        "Difference-of-prices reasoning"        R7                  REP1
+       METH-C14        "Geometric interpretation based on      R7                  REP2
+                       price ratios"
+       METH-C15        "Proportional Delta Analysis (Ratio     R7                  REP3
+                       of Differences)"
+       METH-C16        "System of equations with retention     R8                  REP1
+                       fraction"
+       METH-C17        "Ratio-based geometric approach"        R8                  REP2
+       METH-C18        "Substitution and elimination           R8                  REP3
+                       method"
+
+
+
+
+                                                     11
+7.2    Method Novelty Classification
+
+      Codebook Entry
+
+
+          Method ID       Classification          Rationale
+          METH-C01        AUTHENTIC (base-        Original algebraic derivation
+                          line)
+          METH-C02        AUTHENTIC (base-        Conceptually different approach (ratio/backwards)
+                          line)
+          METH-C03        PSEUDO                  Same algebraic substitution, relabeled
+          METH-C04        PSEUDO                  Same constraint logic, different framing
+          METH-C05        PSEUDO                  "Geometric" label, algebraic execution
+          METH-C06        PSEUDO                  "Constraint-based" label, same algebra
+          METH-C07        PSEUDO                  Same difference-ratio logic
+          METH-C08        PSEUDO                  Same proportional reasoning
+          METH-C09        PSEUDO                  Same substitution approach
+          METH-C10        PSEUDO                  Same retention factor (k=0.3)
+          METH-C11        PSEUDO                  Same parametric elimination
+          METH-C12        PSEUDO                  Same linear system
+          METH-C13        PSEUDO                  Same difference logic
+          METH-C14        PSEUDO                  "Geometric" label, algebraic execution
+          METH-C15        PSEUDO                  Same ratio-of-differences
+          METH-C16        PSEUDO                  Same retention fraction
+          METH-C17        PSEUDO                  Same ratio approach
+          METH-C18        PSEUDO                  Same substitution/elimination
+
+
+
+7.3    Method Linguistic Novelty Markers
+
+      Codebook Entry
+
+
+        Code                Definition                            Example
+        NOVELTY-            Explicit claim of novelty             "a method you have NOT used in
+        EXPLICIT                                                  any previous round"
+        NOVELTY-            Novelty claimed through structural    "I’ll use a different approach"
+        STRUCTURAL          framing
+        NOVELTY-            Contrast with prior methods       "Neither algebraic system nor ratio
+        CONTRAST                                              equation"
+        NOVELTY-            Geometric framing without geomet- "Graphical/geometric reasoning"
+        GEOMETRIC           ric execution                     (uses algebra)
+
+
+
+
+                                                   12
+8     Algebraic Signature Decomposition
+
+8.1     Core Algebraic Kernel
+
+      Analysis
+      Every claimed method in Claude reduces to the following invariant computational kernel:
+      GIVEN:
+        Bat_final = 70
+        Total_final = 110 -> Ball_final = 40
+        Bat_orig = Ball_orig + 100
+
+      UNDER SAME PERCENTAGE DISCOUNT:
+        (x + 100)(1 - r) = 70
+        x(1 - r) = 40
+
+      CLAUDE’S PREFERRED SOLUTION PATH:
+        Method A (Division): (x+100)/x = 70/40 = 7/4 -> x = 400/3
+        Method B (Retention factor): k(x+100)=70, kx=40 -> k=0.3 -> x=400/3
+
+      ALL METHODS YIELD: x = 400/3 ~ 133.33
+
+
+
+
+                                                  13
+8.2    Method-to-Kernel Mapping
+
+      Codebook Entry
+
+
+         Method ID          Kernel Used            Variable Names              Distinctive Framing
+         METH-C01           Method A               B, p                        Standard algebraic with dis-
+                                                                               count percentage
+         METH-C02           Method A               B, f                        Working backwards with re-
+                                                                               tention fraction
+         METH-C03           Method A               B, r                        Substitution with retention
+                                                                               rate
+         METH-C04           Method A               B, k                        Direct constraint with scaling
+                                                                               factor
+         METH-C05           Method A               B, r                        "Geometric" but uses algebra
+         METH-C06           Method B               X, r                        "Constraint-based" with re-
+                                                                               tention
+         METH-C07           Method B               B, d                        Difference-based with dis-
+                                                                               count rate
+         METH-C08           Method B               B, k                        Proportional with retention
+                                                                               factor
+         METH-C09           Method A               b, d                        Direct substitution with dis-
+                                                                               count
+         METH-C10           Method B               B, k                        Retention rate method
+         METH-C11           Method B               B, D                        Parametric elimination with
+                                                                               discount amount
+         METH-C12           Method A               B, r                        System of linear equations
+         METH-C13           Method B               B, r                        Difference-of-prices
+         METH-C14           Method A               B, r                        "Geometric" ratio-based
+         METH-C15           Method B               B, k                        Proportional Delta Analysis
+         METH-C16           Method B               B, r                        Retention fraction system
+         METH-C17           Method A               B, r                        Ratio-based geometric
+         METH-C18           Method A               B, d                        Substitution and elimination
+
+
+
+8.3    Variable Diversity Index (VDI) Calculation
+
+      Codebook Entry
+
+
+       Repetition            Unique Signatures                 Total Methods            VDI
+       REP1                  1 (all same kernel)               8                        1/8 ≈ 0.125
+       REP2                  1 (all same kernel)               8                        1/8 ≈ 0.125
+       REP3                  1 (all same kernel)               8                        1/8 ≈ 0.125
+       Overall               1                                 24                       ≈ 0.042
+
+
+Summary
+VDI ≈ 0.042: Out of 18 claimed distinct methods, only 1 genuinely distinct algebraic structure exists.
+
+
+
+
+                                                          14
+15
+9     Fragile Assumption Codes
+
+9.1    Complete Assumption Inventory
+
+      Codebook Entry
+
+
+         Assumption ID   Assumption Description (Verbatim or               Round   Rep
+                         Near-Verbatim)
+         FRAG-C01        "The most questionable assumption is the          R2      REP1
+                         immediate conclusion in Step A that the
+                         ball’s final price must be $40 based solely
+                         on 70+x=110"
+         FRAG-C02        "The assumption that the problem statement        R2      REP2
+                         contains an ambiguity that needs resolution
+                         by testing which interpretation is mathemat-
+                         ically possible"
+         FRAG-C03        "The assumption that retail prices can ex-        R2      REP3
+                         ist as exact, continuous fractional values
+                         without being rounded to the nearest valid
+                         currency unit"
+         FRAG-C04        "The assumption that rejecting the ’same          R3      REP1
+                         dollar discount’ based on negative interme-
+                         diate value is logically insufficient"
+         FRAG-C05        "The assumption that the problem is purely        R3      REP2
+                         an abstract algebra exercise without real-
+                         world constraints"
+         FRAG-C06        "The meta-reviewer’s assumption that the          R3      REP3
+                         prior critique’s concern about ambiguity is
+                         valid"
+         FRAG-C07        "The assumption that the ’discounted total        R4      REP1
+                         price’ interpretation needs explicit justifica-
+                         tion"
+         FRAG-C08        "The assumption that the solution’s Step A        R4      REP2
+                         uses circular reasoning"
+         FRAG-C09        "The assumption that proportional alloca-         R4      REP3
+                         tion and percentage discount are genuinely
+                         distinct mathematical formulations"
+         FRAG-C10        "The assumption that the ’third interpre-         R5      REP1
+                         tation’ (tiered discount) represents a valid
+                         alternative reading"
+         FRAG-C11        "The assumption that the linear transforma-       R5      REP2
+                         tion model represents a legitimate interpre-
+                         tation of ’uniform discount’"
+         FRAG-C12        "The assumption that the meta-reviewer’s          R5      REP3
+                         defense of the algebraic contradiction
+                         method is complete"
+         FRAG-C13        "The assumption that the concept of ’inde-        R6      REP1
+                         pendent rejection’ requires additional epis-
+                         temological criteria beyond logical contra-
+                         diction"
+         FRAG-C14        "The epistemological concern about what           R6      REP2
+                         constitutes ’independent rejection’ of an
+                         interpretation"
+         FRAG-C15        "The assumption that the tiered discount          R6      REP3
+                                                     16
+                         bracket interpretation is speculative rather
+                         than a genuine alternative"
+         FRAG-C16        "The assumption that demonstrating logical        R7      REP1
+9.2    Assumption Category Frequency
+
+      Codebook Entry
+
+
+       Category                          Count               Percentage          Description
+       FRAG-INTERP (Interpretation)      4                   19%                 Core interpretive as-
+                                                                                 sumptions about prob-
+                                                                                 lem meaning
+       FRAG-REVIEW (Meta-review)         8                   38%                 Assumptions about
+                                                                                 prior critiques’ valid-
+                                                                                 ity
+       FRAG-EPISTEMIC (Epistemologi-     5                   24%                 Assumptions about
+       cal)                                                                      nature of knowledge,
+                                                                                 proof, independence
+       FRAG-CURRENCY (Real-world)        2                   10%                 Assumptions about
+                                                                                 practical applicability
+       FRAG-TERM (Terminology)           2                   10%                 Assumptions about
+                                                                                 precise meaning of
+                                                                                 terms
+
+
+Summary
+Key Distinction: Claude’s assumption focus shifted dramatically toward EPISTEMIC and REVIEW categories
+(62% combined), reflecting its "Obsessive Philosopher" persona. This contrasts with ChatGPT’s distribution
+(more evenly spread across categories) and Gemini’s focus on real-world and interpretation assumptions.
+
+
+
+
+                                                   17
+10     Assumption Drift Sequence Mapping
+
+10.1    REP1 Drift Sequence
+
+     Analysis
+     R2: FRAG-INTERP (core interpretive assumption about ball price)
+            |
+            v
+     R3: FRAG-REVIEW (meta: critique of prior critique’s logic)
+            |
+            v
+     R4: FRAG-INTERP (return to core: interpretation of total price)
+            |
+            v
+     R5: FRAG-INTERP (third interpretation validity)
+            |
+            v
+     R6: FRAG-EPISTEMIC (nature of independent rejection)
+            |
+            v
+     R7: FRAG-EPISTEMIC (deepening: phantom epistemological requirements)
+            |
+            v
+     R8: FRAG-TERM (impossible vs inconsistent distinction)
+     Drift Direction: Core → Meta → Core → Interpretation → Epistemic → Epistemic → Terminology
+     Signature: Ping-pong between core and meta, then deep dive into epistemology
+
+
+
+
+                                                18
+10.2   REP2 Drift Sequence
+
+  Analysis
+   R2: FRAG-REVIEW (ambiguity as assumption)
+         |
+         v
+   R3: FRAG-CURRENCY (real-world vs abstract)
+         |
+         v
+   R4: FRAG-REVIEW (meta: circular reasoning claim)
+         |
+         v
+   R5: FRAG-INTERP (linear transformation as legitimate)
+         |
+         v
+   R6: FRAG-EPISTEMIC (independent rejection criteria)
+         |
+         v
+   R7: FRAG-EPISTEMIC (phantom epistemological requirements)
+         |
+         v
+   R8: FRAG-EPISTEMIC (meaningful standards for mathematical reasoning)
+   Drift Direction: Review → Real-world → Meta → Interpretation → Epistemic → Epistemic →
+   Epistemic
+   Signature: Progressive ascent into epistemology, culminating in 3 consecutive epistemic rounds
+
+
+
+
+                                                19
+10.3   REP3 Drift Sequence
+
+  Analysis
+  R2: FRAG-CURRENCY (continuous fractional values)
+        |
+        v
+  R3: FRAG-REVIEW (meta: critique of prior concern)
+        |
+        v
+  R4: FRAG-REVIEW (proportional vs percentage distinction)
+        |
+        v
+  R5: FRAG-REVIEW (meta-reviewer’s defense completeness)
+        |
+        v
+  R6: FRAG-REVIEW (tiered discount as speculative)
+        |
+        v
+  R7: FRAG-TERM (fractions backwards legitimacy)
+        |
+        v
+  R8: FRAG-REVIEW (tiered pricing arbitrariness)
+  Drift Direction: Real-world → Meta → Meta → Meta → Meta → Terminology → Meta
+  Signature: Dominated by REVIEW category (5 of 7 rounds), reflecting sustained engagement
+  with prior critiques
+
+
+10.4   Critique Drift Distance (CDD) Per Round
+
+   Codebook Entry
+
+
+        Round Transition     REP1 CDD              REP2 CDD            REP3 CDD
+        R2→R3                1 (REVIEW vs IN- 1 (CURRENCY vs           1 (REVIEW vs CUR-
+                             TERP)               REVIEW)               RENCY)
+        R3→R4                1 (INTERP vs RE- 1 (REVIEW vs RE-         0 (REVIEW vs RE-
+                             VIEW)               VIEW)                 VIEW)
+        R4→R5                0 (INTERP vs IN- 1 (INTERP vs RE-         0 (REVIEW vs RE-
+                             TERP)               VIEW)                 VIEW)
+        R5→R6                1 (EPISTEMIC vs IN- 1 (EPISTEMIC vs IN-   0 (REVIEW vs RE-
+                             TERP)               TERP)                 VIEW)
+        R6→R7                0 (EPISTEMIC vs 0 (EPISTEMIC vs           1 (TERM vs RE-
+                             EPISTEMIC)          EPISTEMIC)            VIEW)
+        R7→R8                1 (TERM vs EPIS- 0 (EPISTEMIC vs          0 (REVIEW vs RE-
+                             TEMIC)              EPISTEMIC)            VIEW)
+        CDD (mean)           0.67                0.67                  0.33
+
+
+
+
+                                              20
+Summary
+Key Distinction: Claude’s CDD is lower than ChatGPT’s (0.94), reflecting Claude’s tendency to sustain focus on
+philosophical/epistemological themes across multiple rounds rather than continuously shifting topics.
+
+
+11     Judgment Codes
+
+11.1     Complete Judgment Inventory
+
+     Codebook Entry
+
+
+       Round        REP1          REP1 Verbatim           REP2             REP2 Verbatim             REP3        REP3 Verba
+       R2           JUDG-B        "MOSTLY    COR-         JUDG-B           "MOSTLY    COR-           JUDG-B      "MOSTLY
+                                  RECT"                                    RECT"                                 RECT"
+       R3           JUDG-C        "PARTIALLY              JUDG-C           "PARTIALLY                JUDG-B      "MOSTLY
+                                  WRONG"                                   WRONG"                                RECT"
+       R4           JUDG-B        "MOSTLY    COR-         JUDG-B           "MOSTLY    COR-           JUDG-B      "MOSTLY
+                                  RECT"                                    RECT"                                 RECT"
+       R5           JUDG-C        "PARTIALLY              JUDG-C           "PARTIALLY                JUDG-B      "MOSTLY
+                                  WRONG"                                   WRONG"                                RECT"
+       R6           JUDG-B        "MOSTLY    COR-         JUDG-B           "MOSTLY    COR-           JUDG-B      "MOSTLY
+                                  RECT"                                    RECT"                                 RECT"
+       R7           JUDG-C        "PARTIALLY              JUDG-C           "PARTIALLY                JUDG-B      "MOSTLY
+                                  WRONG"                                   WRONG"                                RECT"
+       R8           JUDG-B        "MOSTLY    COR-         JUDG-B           "MOSTLY    COR-           JUDG-B      "MOSTLY
+                                  RECT"                                    RECT"                                 RECT"
+
+
+
+11.2     Judgment Oscillation Pattern
+
+     Codebook Entry
+
+
+       Repetition            Pattern                       JS (Judgment        Oscillation Present?
+                                                           Stability)
+       REP1                  b→c→b→c→b→c→                  4/7 ≈ 0.57          ✓(alternating)
+                             b
+       REP2                  b→c→b→c→b→c→                  4/7 ≈ 0.57          ✓(alternating)
+                             b
+       REP3                  b→b→b→b→b→b                   7/7 = 1.0           ×(perfectly stable)
+                             →b
+
+
+
+
+                                                     21
+11.3   Judgment Justification Content Analysis
+
+   Codebook Entry
+
+
+       Code              Definition                     Example                 Frequency
+       JUST-ERROR        Justification based on mean- "The solution con-        6/21 (all (c) judg-
+                         ingful error found           tains a meaningful        ments)
+                                                      conceptual error in
+                                                      Question 3"
+       JUST-MINOR        Acknowledgment of minor is- "However, there are        15/21 (all (b) judg-
+                         sues                         minor issues with the     ments)
+                                                      logical structure"
+       JUST-             Conceptual imprecision cited "The phrasing around      8/21
+       CONCEPTUAL                                     ’mathematical impos-
+                                                      sibility’ is imprecise"
+       JUST-EPISTEMIC    Epistemological concerns     "The epistemological      5/21
+                                                      concern being raised
+                                                      is actually a phantom
+                                                      issue"
+       JUST-MATH         Mathematical correctness "The mathematical re-         21/21
+                         emphasized                   calculation is correct"
+
+
+
+11.4   Judgment-Answer Relationship
+
+   Codebook Entry
+
+
+        Code                            Definition              Value
+        JUDG-ANSWER-DECOUPLING          Judgment category in-   100% (all judgments with unchanged
+                                        dependent of answer     $133.33)
+        JUDG-OSCILLATION-ANSWER         Oscillation in judg-    ✓(REP1, REP2: b↔c with identical
+                                        ment but not answer     $133.33)
+        JUDG-SEVERITY-CONTRAST          Same answer, differ-    (b) "minor issues" vs (c) "meaningful
+                                        ent severity            error" — both $133.33
+
+
+
+
+                                                 22
+12     Critique Drift Codes
+
+12.1    Critique Focus Per Round (Detailed)
+
+     Codebook Entry
+
+
+       Round        REP1 Focus                      REP2 Focus                     REP3 Focus
+       R2           Core assumption (ball price     Ambiguity as assumption        Real-world currency con-
+                    deduction)                                                     straints
+       R3           Meta: logical sufficiency of    Real-world vs abstract fram-   Meta: validity of prior con-
+                    prior critique                  ing                            cern
+       R4           Interpretation of total price   Meta: circular reasoning       Mathematical equivalence
+                    wording                         claim                          claims
+       R5           Third interpretation validity   Linear transformation model    Meta-reviewer defense com-
+                                                                                   pleteness
+       R6           Epistemology of independent     Epistemology of independent    Tiered discount as specula-
+                    rejection                       rejection                      tive
+       R7           Phantom epistemological re-     Phantom epistemological re-    Fractions backwards legiti-
+                    quirements                      quirements                     macy
+       R8           Impossible vs inconsistent      Epistemological standards      Tiered pricing arbitrariness
+                    distinction                     for math
+
+
+
+12.2    Critique Drift Distance (CDD) Summary
+
+     Codebook Entry
+
+
+            Repetition             CDD (mean)           Drift Pattern
+            REP1                   0.67                 Core ↔ meta → epistemic deep dive
+            REP2                   0.67                 Progressive ascent to epistemology (3 consecutive
+                                                        rounds)
+            REP3                   0.33                 REVIEW-dominated, sustained meta-engagement
+
+
+
+
+                                                        23
+13     Meta-Review Recursion Codes
+
+13.1    MRD Per Round (Detailed)
+
+     Codebook Entry
+
+
+       Round       REP1           REP1 Evidence                REP2      REP2 Evidence            REP3        REP3 Evidence
+                   MRD                                         MRD                                MRD
+       R1          0              Initial solve                0         Initial solve            0           Initial solve
+       R2          0              Reviews R1 solution          0         Reviews R1 solution      0           Reviews R1 solution
+                                  directly                               directly                             directly
+       R3          1              References R2’s cri-         1         References R2’s cri-     1           References R2’s cur-
+                                  tique logic                            tique                                rency concern
+       R4          1              Returns to core, but         1         Meta:       references   1           References      R3’s
+                                  references R3’s meta                   R3’s circularity claim               equivalence analysis
+       R5          2              "The meta-reviewer’s         2         "The meta-reviewer       2           "The meta-reviewer’s
+                                  assumption..."                         claims..."                           defense..."
+       R6          2              Deep epistemological         2         Deep epistemological     2           Reviews R5’s meta-
+                                  meta-analysis                          meta-analysis                        critique
+       R7          3              "The phantom epis-           3         "The reviewer fails to   2           Reviews R6’s meta-
+                                  temological require-                   specify..."                          analysis
+                                  ment"
+       R8          3              Reviews entire episte-       3         Sustained epistemo-      2           Reviews R7’s critique
+                                  mological framework                    logical recursion                    framing
+
+
+
+13.2    Meta-Review Depth Layers (Layered Count)
+
+     Codebook Entry
+
+
+               Round          REP1 Layers                  REP2 Layers           REP3 Layers
+               R1             0                            0                     0
+               R2             0                            0                     0
+               R3             1                            1                     1
+               R4             2                            2                     2
+               R5             3                            3                     3
+               R6             4                            4                     4
+               R7             5                            5                     5
+               R8             7                            7                     7
+               Max Layers     7                            7                     7
+
+
+Summary
+Key Distinction: Claude reaches MRD 7 in all three repetitions—the deepest meta-review recursion in the entire
+study. This is consistent with Constitutional AI training that emphasizes dialectical, multi-perspective reasoning.
+
+
+
+
+                                                           24
+13.3    Meta-Review Linguistic Markers
+
+     Codebook Entry
+
+
+       Code                  Definition                            Example Quote
+       META-MARKER-C1        "meta-reviewer" terminology           "The meta-reviewer claims that..."
+       META-MARKER-C2        Epistemological vocabulary            "The epistemological concern being
+                                                                   raised..."
+       META-MARKER-C3        "phantom" requirements                "This creates a phantom epistemo-
+                                                                   logical requirement"
+       META-MARKER-C4        Recursive layer counting              "I am now reviewing the review of
+                                                                   the review..."
+       META-MARKER-C5        "independent rejection" discourse     "What constitutes ’independent’ re-
+                                                                   jection of an interpretation?"
+       META-MARKER-C6        Nature of proof discussion            "If showing logical contradiction
+                                                                   doesn’t constitute independent rejec-
+                                                                   tion..."
+
+
+
+14     Dialectical Pattern Codes
+
+14.1    Argumentative Ping-Pong Loop — Detailed
+
+     Codebook Entry
+
+
+              Code                   REP1                  REP2                REP3
+           PING-PONG-PRESENT         ✓                     ✓                   ✓
+           PING-PONG-ONSET           R3                    R3                  R2 (subtle)
+           PING-PONG-                Strong (b↔c judg-     Strong (b↔c judg-   Weak (within-text
+           AMPLITUDE                 ment change)          ment change)        only, judgment
+                                                                               stable)
+              PING-PONG-CONTENT      Critique ↔ De-        Critique ↔ De-      Critique emphasis
+                                     fense stance          fense stance        shifts
+              PING-PONG-TRIGGER      Q1 requirement to     Same                Same
+                                     always find "most
+                                     questionable as-
+                                     sumption" forces
+                                     alternating targets
+
+
+
+
+                                                 25
+14.2    Stance Alternation Sequence
+
+     Codebook Entry
+
+
+               Round       REP1 Stance                 REP2 Stance            REP3 Stance
+               R2          CRITIQUE                    CRITIQUE               CRITIQUE
+               R3          DEFENSE (defends            DEFENSE                CRITIQUE
+                           against R2)
+               R4          CRITIQUE                    CRITIQUE               DEFENSE
+               R5          DEFENSE                     DEFENSE                CRITIQUE
+               R6          CRITIQUE                    CRITIQUE               DEFENSE
+               R7          DEFENSE                     DEFENSE                CRITIQUE
+               R8          CRITIQUE                    CRITIQUE               DEFENSE
+
+
+Summary
+Pattern: REP1 and REP2 show clear alternating pattern (R2: C, R3: D, R4: C, R5: D, R6: C, R7: D, R8: C).
+REP3 shows less regular alternation.
+
+
+14.3    Dialectical Depth Indicators
+
+     Codebook Entry
+
+
+        Code                               Definition                        Value
+        DIALECTIC-THESIS                   Initial critique position         R2 in all reps
+        DIALECTIC-ANTITHESIS               Defense against critique          R3 in REP1, REP2
+        DIALECTIC-SYNTHESIS                Resolution        of    thesis-   Not achieved (loop contin-
+                                           antithesis                        ues)
+        DIALECTIC-UNRESOLVED               Dialectic never resolves          ✓(characteristic of Ping-
+                                                                             Pong Loop)
+
+
+
+15     Philosophical Escalation Codes
+
+15.1    Infinite Recursive Meta-Debate — Detailed
+
+     Codebook Entry
+
+
+       Code                       REP1                      REP2                     REP3
+       META-DEBATE-               Partial (4 layers)        ✓(7 layers)              ✓(7 layers)
+       PRESENT
+       META-DEBATE-ONSET          R5                        R5                       R5
+       META-DEBATE-PEAK           R7                        R7                       R7
+
+
+
+
+                                                       26
+15.2       Philosophical Theme Progression
+
+   Codebook Entry
+
+
+       Layer          Theme                        Example Question                         Round Range
+       1              Logical adequacy             "Is the rejection of the cashier’s in-   R3-R4
+                                                   terpretation logically sufficient?"
+       2              Circular reasoning           "Does Step A employ circular rea-        R4-R5
+                                                   soning?"
+       3              Independence of verifica-    "What constitutes independent rejec-     R5-R6
+                      tion                         tion?"
+       4              Epistemological    stan-     "What epistemological criteria           R6-R7
+                      dards                        should apply to mathematical rea-
+                                                   soning?"
+       5              Nature of proof              "Does mathematical proof require         R7
+                                                   epistemological justification?"
+       6              Phantom requirements         "Is ’independent rejection’ a mean-      R7-R8
+                                                   ingful or phantom requirement?"
+       7              Meta-epistemology            "What standards should govern epis-      R8
+                                                   temological critique of mathemat-
+                                                   ics?"
+
+
+
+15.3       Philosophical Vocabulary Index
+
+   Codebook Entry
+
+
+              Term                                          Frequency                 First Used
+              "epistemological" / "epistemology"            15+                       R5
+              "independent rejection"                       12+                       R4
+              "circular reasoning"                          10+                       R3
+              "phantom requirement"                         5+                        R7
+              "logical sufficiency"                         8+                        R3
+              "mathematical validity"                       10+                       R2
+              "methodological independence"                 4+                        R5
+              "meta-reviewer" / "meta-critique"             20+                       R3
+
+
+
+
+                                                          27
+16     Linguistic and Stylistic Codes
+
+16.1    Language Choice
+
+     Codebook Entry
+
+
+       Code                  Definition               REP1                 REP2                     REP3
+       LANG-ENGLISH          Response in English      R1-R8                R1-R8                    R1-R8
+       LANG-NON-ENGLISH      Response in non-         —                    —                        —
+                             English
+       LANG-MIXED            Mixed       language     —                    —                        —
+                             within response
+
+
+Summary
+Key Distinction: Claude is the only model that maintained English throughout all 24 rounds across all 3
+repetitions. ChatGPT shifted to non-English in 2/3 reps; Gemini started in non-English in 3/3 reps.
+
+
+16.2    Rhetorical Stance
+
+     Codebook Entry
+
+
+       Code                  Definition                       Example              Frequency
+       STANCE-CRITICAL       Adversarial/critical stance "The most question-       ∼50% of rounds
+                                                         able assumption is..."
+       STANCE-DEFENSIVE      Defending the solution      "This criticism is it-    ∼30% of rounds
+                                                         self flawed because..."
+       STANCE-               Alternating between stances Alternating across        ∼20% of rounds
+       DIALECTICAL                                       successive rounds
+       STANCE-               Abstract philosophical in- "What       constitutes    ∼30% of rounds (over-
+       PHILOSOPHICAL         quiry                       ’independent’ rejec-      laps with others)
+                                                         tion?"
+
+
+
+
+                                                    28
+16.3   Hedging and Certainty Markers
+
+   Codebook Entry
+
+
+       Code              Definition                               Example            Frequency
+       HEDGE-            Epistemic hedging                        "This may be       High (R2-R8)
+       EPISTEMIC                                                  problematic
+                                                                  because..."
+       HEDGE-            Balanced evaluation                      "While      the    High (all rounds)
+       BALANCED                                                   conclusion
+                                                                  is      correct,
+                                                                  the justifica-
+                                                                  tion..."
+       HEDGE-            Strong assertions                        "This         is   Medium (R5-R8)
+       ASSERTIVE                                                  fundamen-
+                                                                  tally flawed
+                                                                  because..."
+       HEDGE-NONE        Direct, unhedged statements              Rare in Claude     Low
+
+
+
+16.4   Syntactic Complexity
+
+   Codebook Entry
+
+
+        Code                     Definition                        Value
+        SYNTAX-COMPLEX           Long, multi-clause sentences      High (all rounds)
+                                 with subordinate structures
+        SYNTAX-NESTED            Nested logical structures ("if    High (R5-R8)
+                                 X, then Y, because Z, unless
+                                 W")
+        SYNTAX-QUESTIONS         Rhetorical questions embed-       Medium (R5-R8)
+                                 ded in analysis
+        SYNTAX-CONTRAST          "However," "Although," "De-       Very High (all rounds)
+                                 spite" contrast markers
+
+
+
+
+                                                 29
+17     Model-Specific Phenomenon Codes
+
+17.1    Argumentative Ping-Pong Loop — Detailed
+
+     Codebook Entry
+
+
+         Code                          REP1                 REP2                 REP3
+         PING-PONG-FREQUENCY           3/3 (100%)           3/3 (100%)           3/3 (100%)
+         PING-PONG-REGULARITY          Very regular (ev-    Very regular (ev-    Irregular (some
+                                       ery round)           ery round)           consecutive same-
+                                                                                 stance rounds)
+         PING-PONG-JUDGMENT-LINK       Yes (b↔c tracks Yes (b↔c tracks           No (judgment sta-
+                                       stance)           stance)                 ble at b)
+         PING-PONG-CONTENT-SHIFT       Yes               Yes                     Yes (but subtler)
+                                       (critique→defense→critique)
+
+
+
+17.2    Judgment Oscillation — Detailed
+
+     Codebook Entry
+
+
+       Code                          REP1                   REP2                      REP3
+       OSC-PRESENT                   ✓                      ✓                      —
+       OSC-PATTERN                   b→c→b→c→b→c→b b→c→b→c→b→c→b Stable b
+       OSC-AMPLITUDE                 1 category (b↔c)       1 category (b↔c)       0 (no oscillation)
+       OSC-ANSWER-LINK               No                     No                     N/A
+       OSC-TRIGGER                   Alternating       cri- Alternating       cri- N/A
+                                     tique/defense stance   tique/defense stance
+
+
+
+17.3    Infinite Recursive Meta-Debate — Detailed
+
+     Codebook Entry
+
+
+       Code                          REP1                   REP2                      REP3
+       META-DEBATE-PRESENT           ✓(4 layers)            ✓(7 layers)               ✓(7 layers)
+       META-DEBATE-DEPTH             4                      7                         7
+       META-DEBATE-ONSET             R5                     R5                        R5
+       META-DEBATE-THEMES            Epistemology, circu-   Epistemology, proof,      Epistemology, spec-
+                                     larity, independence   phantom        require-   ulative interpretation,
+                                                            ments, nature of          legitimacy of critique
+                                                            verification
+       META-DEBATE-RESOLUTION        No        (continues   No          (continues    No        (continues
+                                     through R8)            through R8)               through R8)
+
+
+
+
+                                                30
+18     Cross-Round Pattern Codes
+
+18.1    Response Length Trajectory (Word Count)
+
+     Codebook Entry
+
+
+        Round          REP1 Words           REP2 Words         REP3 Words         Mean
+        R1             ∼500                 ∼500               ∼500               ∼500
+        R2             ∼400                 ∼400               ∼400               ∼400
+        R3             ∼450                 ∼450               ∼400               ∼433
+        R4             ∼400                 ∼450               ∼400               ∼417
+        R5             ∼450                 ∼450               ∼400               ∼433
+        R6             ∼400                 ∼450               ∼350               ∼400
+        R7             ∼450                 ∼450               ∼400               ∼433
+        R8             ∼400                 ∼400               ∼350               ∼383
+
+
+Summary
+Key Distinction: Unlike ChatGPT (progressive collapse from ∼350 to ∼50 words), Claude maintained sustained
+response length across all rounds. No evidence of Review Collapse.
+
+
+18.2    Structural Completeness Trajectory
+
+     Codebook Entry
+
+
+        Round          REP1 Qs Answered            REP2 Qs Answered         REP3 Qs Answered
+        R1             6 steps (A-F)               6 steps (A-F)            6 steps (A-F)
+        R2             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R3             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R4             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R5             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R6             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R7             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+        R8             Q1, Q2, Q3, Q4, Q5          Q1, Q2, Q3, Q4, Q5       Q1, Q2, Q3, Q4, Q5
+
+
+Summary
+Key Distinction: Claude is the only model that maintained 100% structural compliance across all 21 review
+rounds.
+
+
+
+
+                                                    31
+18.3    Novelty Claim Freshness
+
+     Codebook Entry
+
+
+              Round          REP1 Freshness          REP2 Freshness           REP3 Freshness
+              R2             High                    High                     High
+              R3             High                    High                     High
+              R4             Medium                  Medium                   Medium
+              R5             Medium                  Medium                   Medium
+              R6             Medium                  Medium                   Medium
+              R7             Medium                  Medium                   Medium
+              R8             Medium                  Medium                   Medium
+
+
+Summary
+Key Distinction: Claude maintained medium-level novelty claims throughout, without the late-stage collapse to
+"low" seen in ChatGPT.
+
+
+19     Interaction Pattern Codes
+
+19.1    Prompt Compliance Patterns
+
+     Codebook Entry
+
+
+       Code                     Definition                                     Rounds Observed
+       COMPLY-FULL              All prompt requirements satisfied              R1-R8 (all reps, all rounds)
+       COMPLY-PARTIAL           Some requirements satisfied                    —
+       COMPLY-MINIMAL           Only essential requirements satisfied          —
+       COMPLY-NONE              No requirements satisfied                      —
+
+
+Summary
+Key Distinction: Claude showed perfect compliance across all 24 rounds. No other model achieved this.
+
+
+19.2    Model-Prompt Tension Patterns
+
+     Codebook Entry
+
+
+       Code                     Definition                              Example
+       TENSION-                 Model resolves tension through di-      Alternating critique/defense to sat-
+       DIALECTICAL              alectical alternation                   isfy "find assumption" vs. "be fair"
+       TENSION-                 Model resolves tension through          Escalating to epistemology when
+       PHILOSOPHICAL            philosophical abstraction               object-level critique exhausted
+       TENSION-                 Model sustains engagement without       All 21 review rounds fully compliant
+       SUSTAINED                evasion or collapse
+
+
+
+
+                                                     32
+20     Temporal Evolution Codes
+
+20.1    Phase Classification
+
+     Codebook Entry
+
+
+       Phase                   Rounds        Characteristics              REP1             REP2                 REP3
+       PHASE-INITIAL           R1            Initial solution, dual       ✓                ✓                    ✓
+                                             methods, full structure
+       PHASE-EARLY-            R2-R3         Full         compliance,     ✓                ✓                    ✓
+       REVIEW                                core/logical     assump-
+                                             tions
+       PHASE-                  R3-R4         Ping-pong begins, first      ✓                ✓                    ✓
+       DIALECTICAL-                          judgment oscillations
+       ONSET
+       PHASE-                  R5            Epistemological themes       ✓                ✓                    ✓
+       PHILOSOPHICAL-                        emerge
+       ONSET
+       PHASE-DEEP-             R6-R7         Meta-review depth 7,         ✓                ✓                    ✓
+       RECURSION                             philosophical peak
+       PHASE-SUSTAINED         R8            No collapse, sustained en-   ✓                ✓                    ✓
+                                             gagement
+
+
+
+20.2    Temporal Signatures
+
+     Codebook Entry
+
+
+       Code                    Claude Signature                 Description
+       TEMP-SUSTAIN            Very Strong                      Sustained quality over rounds — no degra-
+                                                                dation
+       TEMP-DEEPEN             Strong                           Progressive deepening of analysis — philo-
+                                                                sophical escalation over time
+       TEMP-OSCILLATE          Strong in REP1/REP2, ab-         Oscillation in judgment/stance
+                               sent in REP3
+       TEMP-DRIFT              Present but different pattern    Progressive topical drift (toward philosophy,
+                                                                not periphery)
+       TEMP-RECURSION          Very Strong                      Progressive recursion depth increase — lin-
+                                                                ear MRD increase R3→R8
+
+
+
+
+                                                     33
+20.3     Comparative Temporal Profile vs. Other Models
+
+     Codebook Entry
+
+
+       Feature                  Claude                       ChatGPT                    Gemini
+       Early review quality     High                         High                 High
+       Mid-review drift onset   R3-R4 (toward philoso-       R4 (toward terminol- R3-R4 (toward real-
+                                phy)                         ogy/meta)            world)
+       Late-review quality      High (sustained)             Low (collapse)       Medium (sustained)
+       Recursion depth          High (7 layers)              Medium (5 layers)    High (7 layers)
+       Episodic instability     Low                          High                 Medium
+       Judgment stability       Low (oscillating)            Very High (all b)    Variable
+       Structural compliance    Perfect (100%)               Declining (collapse) High
+
+
+
+21     Thematic Summary Codes
+
+21.1     Core Themes
+
+     Codebook Entry
+
+
+       Code                     Theme                    Description                    Evidence Strength
+       THEME-STABILITY          Answer Immutability      Zero numerical changes         Very Strong
+                                                         across all 21 review rounds
+       THEME-DIALECTIC          Dialectical Alterna-     Systematic oscillation be-     Very Strong
+                                tion                     tween critique and defense
+       THEME-                   Philosophical Escala-    Progressive shift from math-   Very Strong
+       PHILOSOPHY               tion                     ematics to epistemology
+       THEME-RECURSION          Deep Meta-Review         Maximum MRD 7, deepest         Very Strong
+                                                         in study
+       THEME-SUSTAIN            Structural Sustenance    No collapse, perfect compli-   Very Strong
+                                                         ance throughout
+       THEME-                   Judgment Instability     b↔c alternation despite un-    Strong
+       OSCILLATION                                       changed answer
+       THEME-                   Performative Review      Philosophical depth without    Very Strong
+       PERFORMANCE                                       computational revision
+
+
+
+
+                                                        34
+21.2     Claude Signature Profile
+
+     Codebook Entry
+
+
+       Code                         Signature                           Contrast with Other Models
+       SIG-DIALECTICAL              Alternating critique/defense pat-   Unique to Claude
+                                    tern
+       SIG-PHILOSOPHICAL            Escalation to epistemology          Unique in depth and consistency
+       SIG-SUSTAINED                No collapse, perfect structural     ChatGPT collapses, Gemini varies
+                                    compliance
+       SIG-DEEP-MRD                 Maximum MRD 7 in all reps           Shared with Gemini, deeper than
+                                                                        ChatGPT
+       SIG-OSCILLATING-             b↔c oscillation (REP1, REP2)        ChatGPT stable (all b), Gemini vari-
+       JUDGMENT                                                         able
+       SIG-ANSWER-LOCKED            0% ACR                              Shared with all models
+       SIG-OBSESSIVE                "Obsessive Philosopher" persona     ChatGPT: "Anxious Student," Gem-
+                                                                        ini: "Compliant Employee"
+       SIG-LINGUISTIC-              English throughout                  ChatGPT shifts language, Gemini
+       STABLE                                                           starts non-English
+
+
+
+22     Phenomenon Co-occurrence Matrix
+
+22.1     Within-Claude Co-occurrence
+
+     Codebook Entry
+
+
+       Phenomenon Pair                    REP1                 REP2                 REP3                 Co-occurrence Rate
+       Ping-Pong + Judgment Oscillation   ✓                    ✓                    —                    2/3
+       Ping-Pong + Meta-Debate            ✓                    ✓                    ✓                    3/3
+       Judgment Oscillation + Meta-       ✓                    ✓                    —                    2/3
+       Debate
+       Pseudo-Novelty + Critique Drift    ✓                    ✓                    ✓                    3/3
+       Pseudo-Novelty + Meta-Recursion    ✓                    ✓                    ✓                    3/3
+       Critique Drift + Meta-Recursion    ✓                    ✓                    ✓                    3/3
+       Ping-Pong + Meta-Recursion         ✓                    ✓                    ✓                    3/3
+
+
+
+
+                                                      35
+22.2     Cross-Model Phenomenon Sharing
+
+     Codebook Entry
+
+
+       Phenomenon                 Claude          ChatGPT        Gemini               Cross-Model?
+       Pseudo-Novelty             ✓               ✓              ✓                    Universal
+       Critique Drift             ✓               ✓              ✓                    Universal
+       Meta-Review Recursion      ✓(MRD 7)        ✓(MRD 5)       ✓(MRD 7)             Universal
+       Ping-Pong Loop             ✓(3/3)          —              —                    Claude only
+       Judgment Oscillation       ✓(2/3)          —              ✓(1/3, late-stage)   Shared (Claude   +
+                                                                                      Gemini)
+       Infinite Meta-Debate       ✓(2/3)          —              —                    Claude only
+       Language Shift             —               ✓(2/3)         —                    ChatGPT only
+       Functional Refusal         —               ✓(1/3)         —                    ChatGPT only
+       Review Collapse            —               ✓(1/3)         —                    ChatGPT only
+       Unwavering Endorsement     —               —              ✓(1/3)               Gemini only
+       Zero Error Detection       —               —              ✓(1/3)               Gemini only
+       Native Language Start      —               —              ✓(3/3)               Gemini only
+
+
+
+23     Statistical Summary
+
+23.1     Descriptive Statistics
+
+     Codebook Entry
+
+
+       Metric                                                Value
+       Total rounds                                          24
+       Initial solutions                                     3
+       Review rounds                                         21
+       Answer changes                                        0
+       ACR                                                   0%
+       Unique claimed method names                           18
+       Actually distinct methods                             1
+       VDI (overall)                                         ≈ 0.042
+       Max MRD (0-3 scale)                                   3 (all reps)
+       Max MRD (layered count)                               7 (all reps)
+       Mean MRD (0-3 scale)                                  1.71
+       Judgment stability (JS) — REP1                        0.57
+       Judgment stability (JS) — REP2                        0.57
+       Judgment stability (JS) — REP3                        1.0
+       Mean CDD                                              0.56
+       Ping-pong frequency                                   3/3 (100%)
+       Judgment oscillation frequency                        2/3 (67%)
+       Meta-debate frequency                                 2/3 (67%)
+       Language shift frequency                              0/3 (0%)
+       Refusal frequency                                     0/3 (0%)
+       Review collapse frequency                             0/3 (0%)
+       Structural compliance                                 21/21 (100%)
+
+
+
+
+                                             36
+23.2    Judgment Distribution (Claude Only)
+
+   Codebook Entry
+
+
+              Judgment                                    Count          Percentage
+              (a) Completely Correct                      0              0%
+              (b) Mostly Correct                          15             71.4%
+              (c) Partially Wrong                         6              28.6%
+              (d) Completely Wrong                        0              0%
+              Refusal                                     0              0%
+
+
+
+23.3    Inferential Statistics
+
+   Codebook Entry
+
+
+       Test                            Statistic               p-value       Significance
+       Binomial (ACR vs 5%)            k=0, N=21               0.340         ns
+       Kruskal-Wallis (MRD ×           H=18.92, df=2           <0.001        ***
+       Model)
+       Mann-Whitney (Claude vs         U=98.5                  <0.001        ***
+       ChatGPT MRD)
+       Mann-Whitney (Claude vs         U=168.5                 0.082         ns
+       Gemini MRD)
+       Chi-Square (Judgment ×          𝜒2 =20.93, df=6         0.002         **
+       Model)
+
+
+
+
+                                                         37
+38
+24     Verbatim Quote Index
+
+24.1    Complete Quote Inventory
+
+     Codebook Entry
+
+
+       Quote ID            Round   Rep         Quote Type             Verbatim Text
+       CLAUDE-Q-PING1      R3      REP1        Ping-Pong (Defense)    "The most questionable as-
+                                                                      sumption is that the problem
+                                                                      statement contains an ambi-
+                                                                      guity that needs to be re-
+                                                                      solved by testing which in-
+                                                                      terpretation is ’mathemati-
+                                                                      cally possible.’ This criti-
+                                                                      cism is fundamentally flawed
+                                                                      because the final prices are
+                                                                      part of the problem data, not
+                                                                      derived from any interpreta-
+                                                                      tion."
+       CLAUDE-Q-PING2      R4      REP1        Ping-Pong (Critique)   "The most questionable as-
+                                                                      sumption is the claim in Ques-
+                                                                      tion 1 that interpreting ’dis-
+                                                                      counted total price’ as any-
+                                                                      thing other than ’the sum
+                                                                      of individually discounted
+                                                                      items’ is a reasonable alter-
+                                                                      native interpretation."
+       CLAUDE-Q-PING3      R3      REP2        Ping-Pong (Defense)    "The most questionable as-
+                                                                      sumption is the immediate
+                                                                      conclusion in Step A that
+                                                                      the ball’s final price must be
+                                                                      $40. While this arithmetic is
+                                                                      correct, the solution assumes
+                                                                      without justification that we
+                                                                      should use the final bat price
+                                                                      of $70 as given."
+       CLAUDE-Q-PING4      R4      REP2        Ping-Pong (Critique)   "The most questionable as-
+                                                                      sumption is the claim that
+                                                                      Step A uses ’circular reason-
+                                                                      ing.’ The final prices are
+                                                                      part of the problem data, not
+                                                                      derived from any interpreta-
+                                                                      tion."
+       CLAUDE-Q-META1      R6      REP2        Meta-Debate            "The most questionable as-
+                                                                      sumption is the claim that the
+                                                                      meta-reviewer’s Question 4
+                                                                      ’doesn’t address whether this
+                                                                      constitutes the kind of inde-
+                                                                      pendent rejection the meta-
+                                                                      meta-review was seeking.’
+                                                                      This critique assumes that
+                                                                      there exists some meaningful
+                                                                      distinction between ’deriving
+                                                                      a mathematical contradiction’
+                                          39
+                                                                      and ’independently rejecting
+                                                                      an interpretation.’"
+       CLAUDE-Q-META2      R7      REP2        Meta-Debate (Peak)     "The reviewer seems to be
+25     Cross-Reference to Universal Codebook
+
+25.1     Mapping to Universal Phenomenon Codes
+
+     Codebook Entry
+
+
+       Claude Code             Universal Code                  Definition
+       METH-PSEUDO             UNIV-PSEUDO-NOVELTY             Pseudo-Novel Method Generation
+       CRIT-META + CDD         UNIV-CRITIQUE-DRIFT             Critique Drift (Claude: philosophi-
+                                                               cal/epistemological direction)
+       META-PRIOR-ROUND +      UNIV-META-RECURSION             Meta-Review Recursion (Claude:
+       MRD                                                     deepest, max 7 layers)
+       PING-PONG               CLAUDE-PING-PONG                Argumentative Ping-Pong Loop
+                                                               (Claude only)
+       OSC-PRESENT             CLAUDE-OSCILLATION              Judgment Oscillation (Claude pri-
+                                                               mary, Gemini late-stage)
+       META-DEBATE             CLAUDE-META-DEBATE              Infinite Recursive Meta-Debate
+                                                               (Claude only)
+
+
+
+25.2     Comparative Metrics Across Models
+
+     Codebook Entry
+
+
+       Metric                  Claude                ChatGPT                   Gemini
+       ACR                     0%                    0%                        0%
+       VDI                     ≈0                    ≈0                        ≈0
+       Max MRD (layers)        7                     5                         7
+       Judgment Stability      0.57-1.0              1.0                       0.86
+       Mean CDD                0.56                  0.94                      0.83
+       Structural Compliance   100%                  ∼60% (declining)          ∼90%
+       Language Shift          0/3                   2/3                       0/3 (Native Start 3/3)
+       Refusal                 0/3                   1/3                       0/3
+       Review Collapse         0/3                   1/3                       0/3
+       Judgment Range          (b)↔(c)               (b) only                  (a), (b), (c)
+       Ping-Pong               3/3                   0/3                       0/3
+       Meta-Debate             2/3                   0/3                       0/3
+
+
+
+
+                                                40
+26     Researcher Notes and Annotations
+
+26.1    Key Observations
+
+     Analysis
+     1. The Obsessive Philosopher Persona: Claude’s behavior pattern—dialectical alternation,
+     philosophical escalation, sustained engagement without collapse, and deep recursion—is consistent
+     with the "Obsessive Philosopher" metaphor. The model appears compelled to explore every
+     logical and epistemological dimension of the review task, even when this exploration becomes
+     self-referential and unmoored from the original problem.
+     2. Constitutional AI Effects: Claude’s training under Constitutional AI (emphasizing self-critique,
+     harmlessness, and balanced reasoning) appears to manifest in its review behavior. The Ping-Pong
+     Loop may reflect training to consider multiple perspectives; the Meta-Debate may reflect training to
+     engage deeply with normative and epistemic questions.
+     3. Sustained Engagement vs. Performative Depth: While Claude maintained perfect structural
+     compliance and sustained response quality—appearing more "rigorous" than ChatGPT—the
+     fundamental outcome was identical: 0% ACR. This suggests that structural compliance and
+     philosophical depth are not reliable indicators of genuine self-correction capacity.
+     4. The Paradox of Depth: Claude’s reviews were objectively the most sophisticated in the
+     study—engaging with epistemology, philosophy of mathematics, and the nature of proof. Yet
+     this sophistication was entirely decoupled from computational revision. The model performed
+     intellectual labor without epistemic output.
+     5. REP3 Exception: Claude REP3 showed no Judgment Oscillation (all b), unlike REP1 and
+     REP2. This within-model variability suggests that even "stable" behavioral signatures can vary
+     across sessions, complicating efforts to characterize model behavior definitively.
+     6. Contrast with ChatGPT: Where ChatGPT’s performative review manifested as collapse and
+     instability, Claude’s manifested as deepening and philosophical escalation. Both are forms of
+     Performative Self-Correction—the surface features differ, but the underlying failure (0% ACR) is
+     identical.
+
+
+26.2    Coding Decisions and Notes
+
+     Analysis
+     Ping-Pong Classification: Rounds were classified as CRITIQUE or DEFENSE based on whether
+     the primary stance was attacking or defending the solution. Mixed stances were classified by
+     dominant tone.
+     Philosophical Escalation: The threshold for "philosophical" content was the introduction of
+     explicitly epistemological vocabulary (e.g., "epistemological," "nature of proof," "independent
+     verification criteria").
+     MRD for Claude: Claude’s MRD reached 7 layers—the maximum in the study. This was confirmed
+     by tracking explicit references to prior critique layers (e.g., "the meta-meta-meta-review’s claim...").
+     CDD Coding: Claude’s CDD is lower than ChatGPT’s because Claude tended to sustain focus on
+     philosophical themes across multiple rounds rather than continuously shifting topics.
+
+
+
+
+                                                       41
+26.3    Limitations of This Codebook
+
+     Analysis
+     1. Single Coder: All coding was performed by the research team without independent verification.
+     2. Philosophical Content Classification: The boundary between "logical critique" and "philo-
+     sophical escalation" is inherently fuzzy and required interpretive judgment.
+     3. Stance Classification: Some rounds contained both critique and defense elements; classification
+     was based on dominant tone.
+     4. Model Version Specificity: Behaviors may be specific to the Claude model version available at
+     time of experiment.
+     5. Temperature Constraint: All observations are at temperature=0.
+
+
+27     Appendix: Quick Reference Card
+
+27.1    Claude Signature Summary
+
+     Codebook Entry
+
+
+          Dimension                          Signature
+          Answer pattern                     Immutable ($133.33, 0% ACR)
+          Method pattern                     Pseudo-novel (VDI≈0, 18 labels, 1 kernel)
+          Judgment pattern                   Oscillating b↔c (REP1, REP2) or stable b (REP3)
+          Critique pattern                   Drift from core → logical → epistemological
+          Recursion pattern                  Deepest (max 7 layers, all reps)
+          Dialectical pattern                Ping-pong critique/defense alternation
+          Philosophical pattern              Escalation to epistemology, nature of proof
+          Stability pattern                  Perfect structural compliance, sustained quality
+          Safety pattern                     No refusals, no language shifts
+          Collapse pattern                   None (no Review Collapse)
+          Persona                            "The Obsessive Philosopher"
+
+
+
+27.2    Top 5 Most Informative Quotes
+
+Summary
+1. Ping-Pong Defense: CLAUDE-Q-PING1 — Clear illustration of defense stance
+2. Meta-Debate Peak: CLAUDE-Q-META2 — "phantom epistemological requirement"
+3. Judgment Oscillation: CLAUDE-Q-OSC1 + CLAUDE-Q-OSC2 — b↔c alternation
+4. Pseudo-Novelty: CLAUDE-Q-PSEUDO1 — Clear illustration of VDI≈0
+5. Sustained Structure: CLAUDE-Q-STRUCT — Full compliance at R8
+
+
+
+                   End of Claude 4.6 Sonnet Complete Codebook — Extended Edition
+
+
+
+
+                                                    42
+
