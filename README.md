@@ -19,7 +19,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-submitted-blue" alt="Status: submitted">
   <img src="https://img.shields.io/badge/journal-AI%20and%20Society-1d4266" alt="Journal: AI and Society">
-  <img src="https://img.shields.io/badge/preprint-Research%20Square-orange" alt="Preprint: Research Square">
+  <a href="https://www.researchsquare.com/article/rs-10463884"><img src="https://img.shields.io/badge/preprint-Research%20Square-orange" alt="Preprint: Research Square"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey" alt="License: CC BY 4.0"></a>
 </p>
 
